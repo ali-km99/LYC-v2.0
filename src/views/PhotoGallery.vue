@@ -96,19 +96,19 @@ import { ref, computed } from 'vue'
 const photos = ref([
   {
     id: 1,
-    url: '',
+    url: 'https://lyc.ly/assets/imeges/image9.jpg',
     title: 'عنوان الصورة 1',
     description: 'وصف مختصر لهذه الصورة 1.',
   },
   {
     id: 2,
-    url: '/images/image1.png',
+    url: 'https://lyc.ly/photo/img1.jpg',
     title: 'عنوان الصورة 2',
     description: 'وصف مختصر لهذه الصورة 2.',
   },
   {
     id: 3,
-    url: '/images/image1.png',
+    url: 'https://lyc.ly/assets/imeges/IMG_6183.jpg',
     title: 'عنوان الصورة 3',
     description: 'وصف مختصر لهذه الصورة 3.',
   },
