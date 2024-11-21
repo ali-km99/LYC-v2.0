@@ -34,6 +34,25 @@ export const photoGroups = [
         title: 'Team Racing',
         description: 'Coordinated fleet racing event',
       },
+
+      {
+        id: '5',
+        url: 'https://lyc.ly/assets/imeges/typs3.jpg',
+        title: 'Team Racing',
+        description: 'Coordinated fleet racing event',
+      },
+      {
+        id: '5',
+        url: 'https://lyc.ly/assets/imeges/typs4.jpg',
+        title: 'Team Racing',
+        description: 'Coordinated fleet racing event',
+      },
+      {
+        id: '5',
+        url: 'https://lyc.ly/assets/imeges/typs5.jpg',
+        title: 'Team Racing',
+        description: 'Coordinated fleet racing event',
+      },
     ],
   },
   {
@@ -44,31 +63,31 @@ export const photoGroups = [
     photos: [
       {
         id: '6',
-        url: 'https://images.unsplash.com/photo-1534870439272-475575042b61?auto=format&fit=crop&w=1200&q=80',
+        url: 'https://lyc.ly/assets/imeges/image7.jpg',
         title: 'Beginner Classes',
         description: 'Learning the basics of sailing',
       },
       {
         id: '7',
-        url: 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1200&q=80',
+        url: 'https://lyc.ly/assets/imeges/image6.jpg',
         title: 'Advanced Navigation',
         description: 'Professional training sessions',
       },
       {
         id: '8',
-        url: 'https://images.unsplash.com/photo-1499363536502-87642509e31b?auto=format&fit=crop&w=1200&q=80',
+        url: '',
         title: 'Safety Workshop',
         description: 'Essential safety training for all members',
       },
       {
         id: '9',
-        url: 'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=1200&q=80',
+        url: '',
         title: 'Navigation Theory',
         description: 'Classroom-based navigation instruction',
       },
       {
         id: '10',
-        url: 'https://images.unsplash.com/photo-1542372147193-a7aca54189cd?auto=format&fit=crop&w=1200&q=80',
+        url: '',
         title: 'Knot Mastery',
         description: 'Essential rope work and knot tying',
       },
@@ -94,13 +113,13 @@ export const photoGroups = [
       },
       {
         id: '13',
-        url: 'https://images.unsplash.com/photo-1534270804882-6b5048b1c1fc?auto=format&fit=crop&w=1200&q=80',
+        url: '',
         title: 'Youth Race Training',
         description: 'Preparing young sailors for competition',
       },
       {
         id: '14',
-        url: 'https://images.unsplash.com/photo-1517488629431-6427e0ee1e5f?auto=format&fit=crop&w=1200&q=80',
+        url: '',
         title: 'Team Building',
         description: 'Youth group activities and exercises',
       },
@@ -132,7 +151,7 @@ export const photoGroups = [
       },
       {
         id: '18',
-        url: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?auto=format&fit=crop&w=1200&q=80',
+        url: '',
         title: 'Club BBQ',
         description: 'Monthly member gathering',
       },

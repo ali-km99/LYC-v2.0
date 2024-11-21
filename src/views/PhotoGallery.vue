@@ -1,14 +1,14 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-blue-500 to-white">
+  <div class="min-h-screen bg-sky-700">
     <div class="hidden lg:block">
       <NavBar />
     </div>
     <div class="relative"><SmallNavbar color="bg-blue-500" /></div>
-    <header class="bg-blue-800/30 text-white py-4 sm:py-6 px-4 sticky top-0 z-40 shadow-lg">
+    <header class="bg-sky-700/20 text-white py-4 sm:py-6 px-4 sticky top-0 z-40 shadow-lg">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div class="flex items-center space-x-3">
-            <h1 class="text-xl sm:text-2xl font-bold">Libyan Sailing Club</h1>
+            <h1 class="text-xl sm:text-2xl font-bold">النادي الليبي لليخوت</h1>
           </div>
           <div class="relative w-full sm:w-auto">
             <input
@@ -24,8 +24,8 @@
 
     <main class="max-w-7xl mx-auto py-8 sm:py-12">
       <div class="space-y-2 mb-8 sm:mb-12 text-center px-4">
-        <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">معرض الصور</h1>
-        <p class="text-sm sm:text-base text-slate-600">Capturing moments on the Mediterranean</p>
+        <h1 class="text-3xl sm:text-4xl font-bold text-white">معرض الصور</h1>
+        <p class="text-sm sm:text-base text-white">اكتشف اللحظات المميزة في النادي الليبي لليخوت</p>
       </div>
 
       <template v-if="filteredGroups.length">
