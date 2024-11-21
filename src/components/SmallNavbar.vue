@@ -47,9 +47,11 @@ const toggelMinu = () => {
         <li v-motion-pop class="py-2 border-b-2 border-bluee-sec w-full text-center">
           <RouterLink :to="{ name: 'home' }"> الرئيسي </RouterLink>
         </li>
-        <li v-motion-pop :delay="200" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-          معرض الصور
-        </li>
+        <RouterLink :to="{ name: 'PhotoGallery' }">
+          <li v-motion-pop :delay="200" class="py-2 border-b-2 border-bluee-sec w-full text-center">
+            معرض الصور
+          </li>
+        </RouterLink>
         <li v-motion-pop :delay="300" class="py-2 border-b-2 border-bluee-sec w-full text-center">
           <RouterLink :to="{ name: 'about' }"> عن النادي </RouterLink>
         </li>
