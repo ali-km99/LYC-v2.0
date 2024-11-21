@@ -1,0 +1,10 @@
+@forward 'vuetify/settings' with (
+  $utilities: false,
+  $color-pack: false
+);
+
+.v-data-table-footer__pagination {
+  > button {
+    transform: rotate(180deg) !important;
+  }
+}

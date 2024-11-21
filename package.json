@@ -14,13 +14,12 @@
   },
   "dependencies": {
     "@jamescoyle/vue-icon": "^0.1.2",
-    "@mdi/font": "^7.4.47",
-    "@mdi/js": "^7.4.47",
     "@vueuse/motion": "^2.2.6",
     "vue": "^3.5.13",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@mdi/js": "^7.4.47",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.9.1",
     "@vitejs/plugin-vue": "^5.2.0",
@@ -34,6 +33,7 @@
     "npm-run-all2": "^7.0.1",
     "postcss": "^8.4.49",
     "prettier": "^3.3.3",
+    "sass-embedded": "^1.81.0",
     "tailwindcss": "^3.4.15",
     "typescript": "~5.6.3",
     "vite": "^5.4.11",

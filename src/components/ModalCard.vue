@@ -10,11 +10,11 @@
         @click.stop
       >
         <button
-          @click="$emit('close')"
+          @click="emit('close')"
           class="absolute top-2 right-2 z-10 p-1.5 sm:p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
           aria-label="Close modal"
         >
-          <svg-icon type="mdi" :path="mdiWindowClose"></svg-icon>
+          <v-icon :icon="mdiWindowClose"></v-icon>
         </button>
 
         <div class="relative flex-1 min-h-0">
@@ -36,11 +36,11 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, watch } from 'vue'
+import { onUnmounted, watch } from 'vue'
 
 import type { Photo } from '../types'
-import { mdiCross, mdiWindowClose } from '@mdi/js'
-import SvgIcon from '@jamescoyle/vue-icon'
+import { mdiWindowClose } from '@mdi/js'
+
 const props = defineProps<{
   photo: Photo | null
 }>()

@@ -30,12 +30,11 @@
           ></div>
         </div>
 
-        <!-- Error State -->
         <div
           v-if="imageError.has(photo.id)"
           class="absolute inset-0 flex flex-col items-center justify-center p-4 text-slate-400"
         >
-          <svg-icon type="mdi" :path="mdiFileImageRemove"></svg-icon>
+          <v-icon :icon="mdiFileImageRemove"></v-icon>
           <p class="text-sm text-center">خطاء في تحميل الصورة</p>
         </div>
 
@@ -72,21 +71,21 @@
         color="blue"
         class="flex items-center gap-2 px-4 sm:px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors text-sm sm:text-base"
       >
-        <svg-icon type="mdi" :path="isExpanded ? mdiChevronUp : mdiChevronDown"></svg-icon>
+        <v-icon :icon="isExpanded ? mdiChevronUp : mdiChevronDown"></v-icon>
         <span>{{ isExpanded ? 'Show Less' : 'Show More' }}</span>
       </button>
     </div>
   </div>
 
   <!-- Modal -->
-  <Modal :photo="selectedPhoto" @close="selectedPhoto = null" />
+  <ModalCard :photo="selectedPhoto" @close="selectedPhoto = null" />
 </template>
 <script setup lang="ts">
-import { ref, computed, watchEffect } from 'vue'
+import { ref, computed } from 'vue'
 import type { Photo } from '../types'
-import Modal from '@/components/Modal.vue'
-import SvgIcon from '@jamescoyle/vue-icon'
+
 import { mdiChevronDown, mdiChevronUp, mdiFileImageRemove } from '@mdi/js'
+import ModalCard from './ModalCard.vue'
 // Props
 const props = defineProps<{
   title: string
