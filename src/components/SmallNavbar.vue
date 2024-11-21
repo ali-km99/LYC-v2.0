@@ -13,7 +13,13 @@ const toggelMinu = () => {
 
 <template>
   <header class="sm:hidden">
-    <nav class="bg-bluee">
+    <nav
+      class="bg-bluee"
+      :class="{
+        'h-96 ': minu,
+        'h-24 ': !minu,
+      }"
+    >
       <div class="flex w-11/12 py-2 justify-between mx-auto items-center">
         <div class="p-2">
           <img src="../assets/imeges/emptylogo.png" width="65" alt="" />
@@ -36,33 +42,31 @@ const toggelMinu = () => {
           ></span>
         </div>
       </div>
-    </nav>
-    <section id="hero" class="h-56 bg-no-repeat bg-left bg-nav-BG flex items-center relative">
-      <ul
-        v-if="minu"
-        id="tabel"
-        class="duration-300 bg-bluee text-white bg-opacity-60 rounded-sm w-11/12 mx-auto flex flex-col items-center justify-items-center absolute top-1 left-3 z-30"
-      >
-        <!-- <li class="py-2 border-b-2 border-bluee-sec w-full text-center"> -->
-        <li v-motion-pop class="py-2 border-b-2 border-bluee-sec w-full text-center">
-          <RouterLink :to="{ name: 'home' }"> الرئيسي </RouterLink>
-        </li>
-        <RouterLink :to="{ name: 'PhotoGallery' }">
-          <li v-motion-pop :delay="200" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-            معرض الصور
+      <section id="hero" class="h-24 bg-no-repeat bg-left bg-nav-BG flex items-center relative">
+        <ul
+          v-if="minu"
+          id="tabel"
+          class="duration-300 bg-bluee text-white bg-opacity-60 rounded-sm w-11/12 mx-auto flex flex-col items-center justify-items-center absolute top-1 left-3 z-30"
+        >
+          <!-- <li class="py-2 border-b-2 border-bluee-sec w-full text-center"> -->
+          <li v-motion-pop class="py-2 border-b-2 border-bluee-sec w-full text-center">
+            <RouterLink :to="{ name: 'home' }"> الرئيسي </RouterLink>
           </li>
-        </RouterLink>
-        <li v-motion-pop :delay="300" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-          <RouterLink :to="{ name: 'about' }"> عن النادي </RouterLink>
-        </li>
+          <li v-motion-pop :delay="200" class="py-2 border-b-2 border-bluee-sec w-full text-center">
+            <RouterLink :to="{ name: 'PhotoGallery' }"> معرض الصور </RouterLink>
+          </li>
+          <li v-motion-pop :delay="300" class="py-2 border-b-2 border-bluee-sec w-full text-center">
+            <RouterLink :to="{ name: 'about' }"> عن النادي </RouterLink>
+          </li>
 
-        <li v-motion-pop :delay="400" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-          <RouterLink :to="{ name: 'GoldenHistory' }"> السجل الذهبي </RouterLink>
-        </li>
-        <li v-motion-pop :delay="400" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-          تواصل معنا
-        </li>
-      </ul>
-    </section>
+          <li v-motion-pop :delay="400" class="py-2 border-b-2 border-bluee-sec w-full text-center">
+            <RouterLink :to="{ name: 'GoldenHistory' }"> السجل الذهبي </RouterLink>
+          </li>
+          <li v-motion-pop :delay="400" class="py-2 border-b-2 border-bluee-sec w-full text-center">
+            تواصل معنا
+          </li>
+        </ul>
+      </section>
+    </nav>
   </header>
 </template>

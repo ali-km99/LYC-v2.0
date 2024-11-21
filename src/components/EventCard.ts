@@ -25,7 +25,7 @@ export const slides2 = [
   },
 ]
 export type Evnt = {
-  year: number
+  year: string
   title: string
   description: string
   images: string[]

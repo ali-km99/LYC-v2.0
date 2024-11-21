@@ -5,22 +5,22 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
 const programs = [
   {
     title: 'تدريب السباحة',
-    count: '90 متدرب',
+    count: '+ 90 متدرب',
     description: 'برامج تدريبية متخصصة في السباحة',
   },
   {
     title: 'تدريب قوارب  الشراع',
-    count: '60 متدرب',
+    count: '+ 60 متدرب',
     description: 'برامج متقدمة في رياضة الشراع',
   },
   {
     title: 'تدريب الألواح الشراعية',
-    count: '12 متدرب',
+    count: '+ 12 متدرب',
     description: 'برامج تدريبي في رياضة الألواح الشراعية',
   },
   {
     title: 'تدريب التجديف  ',
-    count: '120 متدرب',
+    count: '+ 120 متدرب',
     description: 'برامج متقدمة في رياضة قوارب التجديف',
   },
 ]
@@ -36,7 +36,7 @@ const objectives = [
 <template>
   <div class="min-h-screen bg-[#8897B9] lg:bg-white">
     <!-- Hero Section with Fixed Background -->
-    <div class="hero-section relative mb-8">
+    <div class="hero-section lg:bg-about bg-aboutSmall relative mb-8">
       <div class="absolute inset-0 bg-gradient-to-b from-[#3B82F6]/20 to-[#3B82F6]/40"></div>
       <div class="hidden lg:block">
         <Navbar />
@@ -107,10 +107,30 @@ const objectives = [
           </div>
           <p class="text-gray-600">{{ program.description }}</p>
         </div>
-        <img v-if="index === 0" src="../assets/GIF/swimming.gif" alt="" class="lg:w-48 w-24" />
-        <img v-if="index === 1" src="../assets/GIF/sail.gif" alt="" class="lg:w-48 w-24" />
-        <img v-if="index === 2" src="../assets/GIF/sailing.gif" alt="" class="lg:w-48 w-24" />
-        <img v-if="index === 3" src="../assets/GIF/paddle.gif" alt="" class="lg:w-48 w-24" />
+        <img
+          v-if="index === 0"
+          src="../assets/GIF/swimming.gif"
+          alt=""
+          class="lg:w-48 lg:h-48 w-28 h-28"
+        />
+        <img
+          v-if="index === 1"
+          src="../assets/GIF/sail.gif"
+          alt=""
+          class="lg:w-48 lg:h-48 w-28 h-28"
+        />
+        <img
+          v-if="index === 2"
+          src="../assets/GIF/sailing.gif"
+          alt=""
+          class="lg:w-48 lg:h-48 w-28 h-28"
+        />
+        <img
+          v-if="index === 3"
+          src="../assets/GIF/paddle.gif"
+          alt=""
+          class="lg:w-48 lg:h-48 w-28 h-28"
+        />
       </div>
     </div>
 
@@ -130,7 +150,6 @@ div {
 } */
 
 .hero-section {
-  background-image: url('../assets/imeges/image9.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

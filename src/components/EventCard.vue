@@ -7,16 +7,16 @@
       v-motion-slide-visible-bottom
       :delay="200"
       :duration="1500"
-      :class="`w-full lg:w-1/2 ${props.reversed ? 'text-end' : 'text-end'}`"
+      :class="` lg:w-1/2 flex flex-col   ${props.reversed ? 'items-end' : 'items-end'}`"
     >
       <p
         v-motion
         :initial="{ opacity: 0, x: props.reversed ? 200 : -200 }"
-        :enter="{ opacity: 1, x: 100, scale: 1 }"
+        :enter="{ opacity: 1, x: 0, scale: 1 }"
         :variants="{ custom: { scale: 2 } }"
         :delay="200"
         :duration="2000"
-        class="text-white font-semibold bg-[#3B82F6] py-3 px-4 rounded-lg flex justify-center mx-auto lg:mx-0 text-lg lg:text-base w-20 lg:w-16"
+        class="text-white font-semibold bg-[#3B82F6] py-3 px-4 rounded-lg flex lg:justify-normal sm:justify-center mx-auto lg:mx-0 text-lg lg:text-base"
       >
         {{ event.year }}
       </p>
@@ -37,22 +37,19 @@
 
     <!-- قسم الصور -->
     <div
-      class="flex space-x-4 w-full lg:w-1/2 mt-4 lg:mt-0"
-      v-motion
+      class="flex gap-2 w-1/2 mt-4 lg:mt-0 lg:justify-normal justify-center"
       :initial="{ opacity: 0, y: props.reversed ? 100 : -100 }"
       :enter="{ opacity: 1, y: 0, scale: 1 }"
       :delay="200"
       :duration="1200"
+      v-motion-slide-visible-once-right
     >
       <img
-        v-motion-slide-visible-once-right
-        :delay="200"
-        :duration="1200"
         v-for="(image, index) in event.images"
         :key="index"
         :src="image"
         :alt="`صورة لـ ${event.title}`"
-        class="w-full h-48 lg:h-64 object-cover rounded-lg shadow-lg mx-auto lg:mx-0"
+        class="w-full h-48 lg:h-64 object-cover rounded-lg shadow-lg lg:mx-0"
       />
     </div>
   </div>

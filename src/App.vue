@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import router from './router'
 </script>
 
 <template>
@@ -10,24 +11,33 @@ import { RouterView } from 'vue-router'
     <div class="px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
       <nav class="flex flex-wrap justify-center -mx-5 -my-2">
         <div class="px-5 py-2">
-          <a href="#" class="text-base leading-6 text-white hover:text-gray-900"> الأخبار </a>
+          <a href="/aboutUs" class="text-base leading-6 text-white hover:text-gray-900">
+            عن النادي
+          </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="#" class="text-base leading-6 text-white hover:text-gray-900"> معرض الصور </a>
+          <a href="/PhotoGallery" class="text-base leading-6 text-white hover:text-gray-900">
+            معرض الصور
+          </a>
         </div>
         <div class="px-5 py-2">
-          <a href="#" class="text-base leading-6 text-white hover:text-gray-900"> الرئيسي </a>
+          <a
+            @click="router.replace({ name: 'home' })"
+            class="text-base leading-6 text-white hover:text-gray-900"
+          >
+            الرئيسي
+          </a>
         </div>
+
         <div class="px-5 py-2">
-          <a href="#" class="text-base leading-6 text-white hover:text-gray-900"> تواصل </a>
-        </div>
-        <div class="px-5 py-2">
-          <a href="#" class="text-base leading-6 text-white hover:text-gray-900"> الأنشطة </a>
+          <a href="/GoldenHistory" class="text-base leading-6 text-white hover:text-gray-900">
+            السجل الذهبي
+          </a>
         </div>
       </nav>
       <div class="flex justify-center mt-8 space-x-6">
-        <a href="#" class="text-gray-400 hover:text-white">
+        <a href="https://www.facebook.com/LibyanYachtClub" class="text-gray-400 hover:text-white">
           <span class="sr-only">Facebook</span>
           <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -37,7 +47,7 @@ import { RouterView } from 'vue-router'
             ></path>
           </svg>
         </a>
-        <a href="#" class="text-gray-400 hover:text-white">
+        <a href="https://www.instagram.com/libyanyacht" class="text-gray-400 hover:text-white">
           <span class="sr-only">Instagram</span>
           <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -49,9 +59,9 @@ import { RouterView } from 'vue-router'
         </a>
         <a href="#" class="text-gray-400 hover:text-white">
           <!--
-          
+
           viewBox="0 0 24 24"
-          
+
           aria-hidden="true"
            -->
           <span class="sr-only">x</span>
@@ -68,9 +78,9 @@ import { RouterView } from 'vue-router'
         </a>
         <a href="#" class="text-gray-400 hover:text-white">
           <!--
-          
+
           viewBox="0 0 24 24"
-          
+
           aria-hidden="true"
            -->
           <span class="sr-only">x</span>

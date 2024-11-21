@@ -3,18 +3,20 @@
     <Navbar />
   </div>
   <div class="relative bg-blue-500"><SmallNavbar /></div>
-  <header class="bg-white text-blue-600 text-center pt-10 pb-20">
-    <h1 class="text-3xl font-bold text-blue-600 flex justify-center items-center">
-      <span><img src="../assets/imeges/winner.png" width="60px" alt="" class="m-2" /></span>
+  <header class="bg-blue-500/10 text-blue-600 text-center pt-10 pb-20 px-5 shadow-lg">
+    <h1 class="text-3xl font-semibold text-blue-600 flex justify-center items-center">
       التاريخ الذهبي - نادي الليبي لليخوت
     </h1>
-    <p class="mt-2 text-lg text-blue-500">استكشف إنجازاتنا على مر السنين</p>
+    <p class="mt-6 text-lg text-blue-800">
+      شـارك النـادي فـي العديـد مـن بطـوالت داخـل وخـارج الوطـن ومجموعـة مـن المعـارض والمهرجانـات
+      واألنشـطة لنشـر الثقافـة البحريـة والرياضـة داخـل المجتمـع .
+    </p>
   </header>
   <div class="container mx-auto mt-10 px-4">
     <div class="relative">
       <!-- الخط الرئيسي المتعرج -->
       <div
-        class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-[#3B82F6] timeline-line"
+        class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-[#3B82F6] timeline-line hidden lg:block"
       ></div>
 
       <!-- الأحداث -->
@@ -38,38 +40,114 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
 
 const events: Evnt[] = [
   {
-    year: 2017,
+    year: '2017 أغسطص',
     title: ' البطوله الاولى للنادي الليبي لليخوت',
     description:
       'الترتيب الأول و الثاني  فئه كبار في صنف الأبتومست  بالبطولة الأولى للنادي الليبي لليخوت',
-    images: ['src/assets/imeges/image1.png', 'src/assets/imeges/image2.png'],
+    images: ['src/assets/imeges/golden2017kids2.JPG', 'src/assets/imeges/golden2017kids.jpg'],
   },
   {
-    year: 2017,
+    year: '2017 أغسطص',
     title: ' البطوله الاولى للنادي الليبي لليخوت',
     description:
       'الترتيب الثاني و الثالث فئه الصغار في صنف الأوبتيمست بالبطوله الأولى للنادي الليبي لليخوت',
+    images: ['src/assets/imeges/golden2017kids3.jpg', 'src/assets/imeges/golden2017kids4.jpg'],
+  },
+  {
+    year: '2017 ديسمبر',
+    title: 'بطولة زليتن للقوارب الشراعية  ',
+    description: 'الترتيب الأول و الثاني في صنف الأوبتيموس ببطولة زليتن للقوارب الشراعية ',
+    images: ['src/assets/imeges/golden2017kids6.jpg', 'src/assets/imeges/golden2017kids7.jpg'],
+  },
+  {
+    year: '2018 أغسطص',
+    title: ' البطوله الثانيه للنادي الليبي لليخوت',
+    description:
+      'الترتيب الأول و الثاني و ثالث فئه كبار في صنف الأبتومست  بالبطولة الثانيه للنادي الليبي لليخوت',
+    images: ['src/assets/imeges/golden2017kids2.JPG', 'src/assets/imeges/golden2017kids.jpg'],
+  },
+  {
+    year: '2018 أغسطص',
+    title: ' البطوله الثانيه للنادي الليبي لليخوت',
+    description:
+      'الترتيب الأول و الثاني و الثالث فئه الصغار في صنف الأوبتيمست بالبطوله الثانيه للنادي الليبي لليخوت',
+    images: ['src/assets/imeges/golden2017kids3.jpg', 'src/assets/imeges/golden2017kids4.jpg'],
+  },
+  {
+    year: '2018 أغسطص',
+    title: ' البطوله الثانيه للنادي الليبي لليخوت',
+    description: `الترتيــب األول و الثانــي و الثالــث فــي صنــف الهوبــي كات 16 بالبطولــة الثانيــة للنــادي
+الليبــي لليخــوت 2018 .
+`,
+    images: ['src/assets/imeges/image8.jpg', 'src/assets/imeges/image7.jpg'],
+  },
+
+  // {
+  //   year: ' 2018 مارس',
+  //   title: '   تركيا - بطولة بدروم الدولية ',
+  //   description: ' بطولة بدروم الدولية في نسختها السادسة بمدينة بدروم ',
+  //   images: ['src/assets/imeges/image3.png', 'src/assets/imeges/image4.jpg'],
+  // },
+  {
+    year: '2019 أغسطص',
+    title: ' البطوله الثالثه للنادي الليبي لليخوت',
+    description: 'الترتيب الأول و الثاني و الثالث فئه كبار بالبطوله الثانيه للنادي الليبي لليخوت',
+    images: ['src/assets/imeges/golden2017kids3.jpg', 'src/assets/imeges/golden2017kids4.jpg'],
+  },
+  {
+    year: '2019 أغسطص',
+    title: ' البطوله الثالثه للنادي الليبي لليخوت',
+    description:
+      'الترتيب الأول  و الثالث فئه الصغار في صنف الأوبتيمست بالبطوله الثانيه للنادي الليبي لليخوت',
+    images: ['src/assets/imeges/golden2017kids3.jpg', 'src/assets/imeges/golden2017kids4.jpg'],
+  },
+  // {
+  //   year: ' مارس 2019',
+  //   title: ' تركيا -بطولة بدروم الدولية',
+  //   description: 'بطولة بدروم الدولية في نسختها السابعة بمدينة بدروم ',
+  //   images: ['src/assets/imeges/image3.png', 'src/assets/imeges/image4.jpg'],
+  // },
+  // {
+  //   year: ' 2019 ابريل',
+  //   title: 'معرض طرابلس الدولي',
+  //   description: ' معرض طرابلس الدولي بجناح من ضمن أجنحة وزارة السياحة',
+  //   images: ['src/assets/imeges/image3.png', 'src/assets/imeges/image4.jpg'],
+  // },
+  // {
+  //   year: ' 2019 ابريل',
+  //   title: ' بطوله تونس',
+  //   description: ' بطولة تونس بجزيرة جربة',
+  //   images: ['src/assets/imeges/image3.png', 'src/assets/imeges/image4.jpg'],
+  // },
+  // {
+  //   year: '  أغسطص .2019 ',
+  //   title: 'بطوله تونس',
+  //   description: ' بطولة تونس بمدينة تونس',
+  //   images: ['src/assets/imeges/image3.png', 'src/assets/imeges/image4.jpg'],
+  // },
+  {
+    year: ' نوفمبر 2019 ',
+    title: ' الحممامت- بطولة كأس تونس',
+    description:
+      ' الترتيــب الرابــع و الخامــس و الســادس فــي صنــف الليــزر راديــال ببطولــة كأس تونــس',
     images: ['src/assets/imeges/image3.png', 'src/assets/imeges/image4.jpg'],
   },
   {
-    year: 2023,
-    title: 'آخر إنجاز',
-    description:
-      'في عام 2023، حقق النادي إنجازاً آخر في بطولة دولية، مما يُعد تتويجاً لجهود السنوات العديدة في تطوير مهارات اللاعبين.',
-    images: ['src/assets/imeges/image5.png'],
+    year: ' نوفمبر 2019 ',
+    title: 'الحممات- بطولة كأس تونس',
+    description: ' الترتيب الثامن في صنف الليزر 4.7 ببطولة كأس تونس',
+    images: ['src/assets/imeges/image3.png', 'src/assets/imeges/image4.jpg'],
   },
   {
-    year: 1990,
-    title: 'إنشاء النادي',
-    description:
-      'تم إنشاء النادي في عام 1990 بهدف نشر رياضة الأشرعة البحرية في المنطقة وتحقيق النجاح على الصعيد المحلي والعالمي.',
-    images: ['src/assets/imeges/image1.png', 'src/assets/imeges/image2.png'],
+    year: ' نوفمبر 2019 ',
+    title: 'الحممات- بطولة كأس تونس',
+    description: ' التراتيـب 12 و 15 و 17 فـي صنـف األوبتمسـت ببطولـة أكس تونـس',
+    images: ['src/assets/imeges/image3.png', 'src/assets/imeges/image4.jpg'],
   },
   {
-    year: 2005,
-    title: 'أول بطولة عالمية',
-    description:
-      'حقق النادي أول فوز له في بطولة عالمية عام 2005، مما أسهم في رفع اسم النادي دولياً وجعل اللاعبين يحظون بتقدير عالمي.',
+    year: ' نوفمبر 2019 ',
+    title: '   زوارة-بطولة ليبيا للألواح الشراعية ',
+    description: ' الترتيب الثاني في بطولة ليبيا لأللواح الشراعية  ',
     images: ['src/assets/imeges/image3.png', 'src/assets/imeges/image4.jpg'],
   },
 ]

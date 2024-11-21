@@ -2,19 +2,21 @@
 import { slides2 } from '@/components/EventCard'
 import NavBar from '@/components/NavBar.vue'
 import SmallNavbar from '@/components/SmallNavbar.vue'
+import router from '@/router'
+import { mdiAccount, mdiEmail, mdiMail, mdiPhone, mdiSend } from '@mdi/js'
 </script>
 
 <template>
-  <div class="body w-full h-[951px] bg-cover">
+  <div class="body w-full h-[951px] bg-cover transition duration-500">
     <div class="hidden lg:block">
       <NavBar />
     </div>
     <SmallNavbar />
     <div
-      class="w-full text-center text-white font-semibold p-4 text-2xl -mt-20 sm:hidden"
+      class="w-full text-center text-white font-semibold p-4 text-2xl mt-32 rounded-md sm:hidden"
       style="text-shadow: 5px 4px 7px black"
     >
-      <div class="bg-slate-300/25 full flex col-start-3 flex-col p-3">
+      <div class="bg-slate-300/25 flex col-start-3 flex-col p-3 rounded-md">
         <p class="text-2xl text-white font-bold text-center">
           النادي الليبي لليخوت - LIBYA YACHT Club
         </p>
@@ -24,7 +26,7 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
         المزيد
       </button> -->
         <div class="self-start p-2 px-4">
-          <v-btn color="#FFC400">المزيد</v-btn>
+          <v-btn color="#FFC400" @click="router.replace({ name: 'about' })">المزيد</v-btn>
         </div>
       </div>
     </div>
@@ -44,7 +46,7 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
           المزيد
         </button> -->
         <div class="self-start p-2 px-4">
-          <v-btn color="#FFC400">المزيد</v-btn>
+          <v-btn color="#FFC400" @click="router.replace({ name: 'about' })">المزيد</v-btn>
         </div>
       </div>
     </div>
@@ -81,14 +83,14 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
     <div class="d-flex fill-height justify-center align-center">
       <v-carousel height="400" hide-delimiter-background show-arrows>
         <template v-slot:next="{ props }">
-          <div class="mt-48">
+          <div class="mt-80">
             <v-btn @click="props.onClick" variant="outlined" color="primary" size="large"
               >التالي
             </v-btn>
           </div>
         </template>
         <template v-slot:prev="{ props }">
-          <div class="mt-48">
+          <div class="mt-80">
             <v-btn variant="outlined" color="primary" size="large" @click="props.onClick"
               >السابق
             </v-btn>
@@ -274,7 +276,7 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
     <div
       class="grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-8 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white mt-4 before:absolute before:right-0 before:w-[300px] before:bg-blue-500 before:h-full max-md:before:hidden"
     >
-      <div>
+      <div id="contact">
         <h2 class="text-blue-600 text-3xl font-bold text-end">تواصل معنا</h2>
         <p class="text-sm text-gray-500 mt-4 leading-relaxed text-end">
           هل لديك استفسار محدد أو تتطلع إلى استكشاف فرص جديدة؟ فريقنا ذو الخبرة مستعد للتعاون معك.
@@ -282,53 +284,32 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
 
         <form>
           <div class="space-y-8 mt-8" dir="rtl">
-            <div class="flex gap-2">
-              <input
-                type="text"
-                placeholder=" الأسم"
-                class="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-blue-600 outline-none"
-              />
-
-              <input
-                type="number"
-                placeholder=" رقم الهاتف"
-                class="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-blue-600 outline-none"
-              />
+            <div class="flex lg:gap-2 gap-6 lg:flex-row flex-col">
+              <v-text-field
+                label="الإسم "
+                :prepend-icon="mdiAccount"
+                variant="underlined"
+              ></v-text-field>
+              <v-text-field
+                label="رقم الهاتف "
+                :prepend-icon="mdiPhone"
+                variant="underlined"
+              ></v-text-field>
             </div>
 
-            <input
-              type="email"
-              placeholder="البريد الأكتروني"
-              class="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-blue-600 outline-none"
-            />
+            <v-text-field
+              label="البريد الاكتروني"
+              :prepend-icon="mdiEmail"
+              variant="underlined"
+            ></v-text-field>
 
-            <textarea
-              placeholder=" أكتب رساله"
-              class="px-2 pt-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-blue-600 outline-none"
-            ></textarea>
+            <v-textarea
+              label="أكتب الرساله هنا"
+              :prepend-icon="mdiMail"
+              variant="underlined"
+            ></v-textarea>
+            <v-btn color="#3B82F6" text="أرسل إيميل" :append-icon="mdiSend"> </v-btn>
           </div>
-
-          <button
-            type="button"
-            class="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16px"
-              height="16px"
-              fill="#fff"
-              class="mr-2"
-              viewBox="0 0 548.244 548.244"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                clip-rule="evenodd"
-                data-original="#000000"
-              />
-            </svg>
-            أرسل إيميل
-          </button>
         </form>
 
         <ul class="mt-4 flex flex-wrap justify-center gap-6">
@@ -346,7 +327,7 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
               />
             </svg>
             <a href="javascript:void(0)" class="text-sm ml-4">
-              <strong>info@example.com</strong>
+              <strong>info@lyc.ly</strong>
             </a>
           </li>
           <li class="flex items-center text-blue-600">
@@ -367,79 +348,6 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
             </a>
           </li>
         </ul>
-
-        <!-- <div dir="rtl">
-          <div class="flex justify-center mt-8 gap-4">
-            <a
-              href="#"
-              class="hover:scale-105 text-gray-400 hover:text-blue-400"
-            >
-              <span class="sr-only">Facebook</span>
-              <svg
-                class="w-6 h-6"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
-            <a
-              href="#"
-              class="hover:scale-105 text-gray-400 hover:text-fuchsia-500"
-            >
-              <span class="sr-only">Instagram</span>
-              <svg
-                class="w-6 h-6"
-                aria-hidden="true"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
-
-            <a
-              href="#"
-              class="hover:scale-105 text-gray-400 hover:text-red-600"
-            >
-            
-              <span class="sr-only">x</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                viewBox="0 0 32 32"
-                fill="currentColor"
-              >
-                <path
-                  d="M31.331,8.248c-.368-1.386-1.452-2.477-2.829-2.848-2.496-.673-12.502-.673-12.502-.673,0,0-10.007,0-12.502,.673-1.377,.37-2.461,1.462-2.829,2.848-.669,2.512-.669,7.752-.669,7.752,0,0,0,5.241,.669,7.752,.368,1.386,1.452,2.477,2.829,2.847,2.496,.673,12.502,.673,12.502,.673,0,0,10.007,0,12.502-.673,1.377-.37,2.461-1.462,2.829-2.847,.669-2.512,.669-7.752,.669-7.752,0,0,0-5.24-.669-7.752ZM12.727,20.758V11.242l8.364,4.758-8.364,4.758Z"
-                ></path>
-              </svg>
-            </a>
-            <a href="#" class="hover:scale-105 text-gray-400 hover:text-black">
-             
-              <span class="sr-only">x</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                viewBox="0 0 32 32"
-                fill="currentColor"
-              >
-                <path
-                  d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </div> -->
       </div>
       <div class="z-10 relative h-full max-md:min-h-[350px]">
         <iframe

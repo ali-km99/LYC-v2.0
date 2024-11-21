@@ -3,11 +3,11 @@
     <!-- Header Section -->
     <div class="mb-4 sm:mb-6 px-4 sm:px-0" v-if="courseInfo">
       <h2
-        class="text-xl sm:text-2xl font-semibold text-white mb-2 sm:mb-3 border-b border-blue-200 pb-2 text-right"
+        class="text-xl sm:text-2xl font-semibold text-blue-600 mb-2 sm:mb-3 border-b border-blue-200 pb-2 text-right"
       >
         {{ title }}
       </h2>
-      <p v-if="courseInfo" class="text-sm sm:text-base text-slate-200 mb-4 italic text-right">
+      <p v-if="courseInfo" class="text-sm sm:text-base text-blue-800 mb-4 italic text-right">
         {{ courseInfo }}
       </p>
     </div>

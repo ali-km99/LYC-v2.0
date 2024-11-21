@@ -1,10 +1,12 @@
 <template>
-  <div class="min-h-screen bg-sky-700">
-    <div class="hidden lg:block">
+  <div class="min-h-screen bg-white">
+    <div class="hidden lg:block bg-blue-500">
       <NavBar />
     </div>
-    <div class="relative"><SmallNavbar color="bg-blue-500" /></div>
-    <header class="bg-sky-700/20 text-white py-4 sm:py-6 px-4 sticky top-0 z-40 shadow-lg">
+    <div class="relative bg-blue-500/90"><SmallNavbar color="bg-blue-500" /></div>
+    <header
+      class="bg-blue-500/90 backdrop-blur-sm text-white py-4 sm:py-6 px-4 sticky top-0 z-40 shadow-lg"
+    >
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div class="flex items-center space-x-3">
