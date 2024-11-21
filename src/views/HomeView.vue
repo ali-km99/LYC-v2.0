@@ -459,7 +459,6 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
 
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
 }
 
 /* .text-img {
