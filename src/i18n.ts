@@ -4,15 +4,16 @@ import ar from './locales/ar.json'
 
 type LocaleMessage = Record<string, string>
 type LocaleMessages = Record<string, LocaleMessage>
+function loadLocaleMessages() {
+  const messages: Record<string, any> = {}
+  const localeFiles = import.meta.glob('./locales/*.json', { eager: true })
 
-function loadLocaleMessages(): LocaleMessages {
-  const locales: Array<Record<string, LocaleMessage>> = [{ en }, { ar }]
-  const messages: LocaleMessages = {}
-
-  locales.forEach((lang) => {
-    const [key] = Object.keys(lang) // الحصول على أول مفتاح (مثلاً 'en' أو 'ar')
-    messages[key] = lang[key]
-  })
+  for (const [path, content] of Object.entries(localeFiles)) {
+    const locale = path.match(/\/([^/]+)\.json$/)?.[1]
+    if (locale && typeof content === 'object' && 'default' in content!) {
+      messages[locale] = content.default
+    }
+  }
 
   return messages
 }
