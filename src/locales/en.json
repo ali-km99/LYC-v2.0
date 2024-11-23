@@ -1,0 +1,19 @@
+{
+  "Nav": {
+    "home": "home",
+    "PhotoGallery": " PhotoGallery",
+    "about": "about  ",
+    "GoldenHistory": " GoldenHistory  ",
+    "contact": "  contact Us ",
+    "lang": "locale"
+  },
+
+  "content": {
+    "clubName": "Libya Yacht Club - LIBYA YACHT Club",
+    "description1": "A private club specializing in water sports and marine games",
+    "description2": "Accredited by the General Authority for Youth and Sports",
+    "moreButton": "More"
+  },
+  "aboutClub": "About Libya Yacht Club",
+  "next": "next"
+}

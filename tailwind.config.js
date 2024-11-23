@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        aboutSmall: "url('../assets/imeges/image1.png')",
+        aboutSmall: "url('../assets/imeges/bg3.jpg ')",
         about: " url('../assets/imeges/image9.jpg')",
       },
     },

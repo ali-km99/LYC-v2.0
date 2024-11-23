@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { mdiWeb } from '@mdi/js'
 import { ref } from 'vue'
 
 const minu = ref(false)
@@ -65,6 +66,23 @@ const toggelMinu = () => {
           <li v-motion-pop :delay="400" class="py-2 border-b-2 border-bluee-sec w-full text-center">
             تواصل معنا
           </li>
+          <div class="flex p-4 mr-4 gap-3">
+            <select
+              class="w-20 text-slate-300 bg-transparent border border-gray-300 rounded"
+              v-model="$i18n.locale"
+            >
+              <option
+                class="uppercase"
+                v-for="locale in $i18n.availableLocales"
+                :key="`locale-${locale}`"
+                :value="locale"
+              >
+                {{ locale }}
+              </option>
+            </select>
+            :{{ $t('Nav["lang"]') }}
+            <v-icon :icon="mdiWeb" color="#FFFFFF"></v-icon>
+          </div>
         </ul>
       </section>
     </nav>
