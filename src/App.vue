@@ -12,13 +12,13 @@ import router from './router'
       <nav class="flex flex-wrap justify-center -mx-5 -my-2">
         <div class="px-5 py-2">
           <a href="/aboutUs" class="text-base leading-6 text-white hover:text-gray-900">
-            عن النادي
+            {{ $t('Nav.about') }}
           </a>
         </div>
 
         <div class="px-5 py-2">
           <a href="/PhotoGallery" class="text-base leading-6 text-white hover:text-gray-900">
-            معرض الصور
+            {{ $t('Nav.PhotoGallery') }}
           </a>
         </div>
         <div class="px-5 py-2">
@@ -26,13 +26,13 @@ import router from './router'
             @click="router.replace({ name: 'home' })"
             class="text-base leading-6 text-white hover:text-gray-900"
           >
-            الرئيسي
+            {{ $t('Nav.home') }}
           </a>
         </div>
 
         <div class="px-5 py-2">
           <a href="/GoldenHistory" class="text-base leading-6 text-white hover:text-gray-900">
-            السجل الذهبي
+            {{ $t('Nav.GoldenHistory') }}
           </a>
         </div>
       </nav>
@@ -97,7 +97,7 @@ import router from './router'
         </a>
       </div>
       <p class="mt-8 text-sm leading-6 text-center text-white">
-        © النادي الليبي لليخوت - جميع الحقوق محفوظة
+        {{ $t('Copyright') }}
       </p>
     </div>
   </footer>

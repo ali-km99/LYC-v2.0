@@ -33,6 +33,18 @@ const router = createRouter({
 
       component: () => import('../views/PhotoGallery.vue'),
     },
+    {
+      path: '/Programs',
+      name: 'ProgramsPage',
+
+      component: () => import('../views/ProgramsPage.vue'),
+    },
+    {
+      path: '/Advertisements',
+      name: 'Advertisements',
+
+      component: () => import('../views/Advertisements.vue'),
+    },
   ],
 })
 

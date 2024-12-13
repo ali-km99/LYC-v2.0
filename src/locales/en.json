@@ -1,19 +1,66 @@
 {
   "Nav": {
-    "home": "home",
-    "PhotoGallery": " PhotoGallery",
-    "about": "about  ",
-    "GoldenHistory": " GoldenHistory  ",
-    "contact": "  contact Us ",
-    "lang": "locale"
+    "home": "Home",
+    "PhotoGallery": " Photo Gallery",
+    "about": "About  ",
+    "GoldenHistory": " Golden History  ",
+    "Programs": "Programs  ",
+    "Advertisements": "  Advertisements ",
+    "contact": "Contact Us ",
+    "lang": "Locale"
   },
 
   "content": {
-    "clubName": "Libya Yacht Club - LIBYA YACHT Club",
-    "description1": "A private club specializing in water sports and marine games",
-    "description2": "Accredited by the General Authority for Youth and Sports",
+    "clubName": "Libya Yacht Club - LIBYAN YACHT CLUB",
+    "description1": "A private club specializing in water sports and sea games",
+    "description2": "Founded in 2015 in the city of Tripoli.",
     "moreButton": "More"
   },
   "aboutClub": "About Libya Yacht Club",
-  "next": "next"
+  "next": "next",
+  "back": "back",
+  "TYtitle": "Sports Categories at the Club",
+  "TYdescription": "We guarantee the highest efficiency in our English language learning courses by applying methods that make learning easier and faster. We use unique educational solutions and the latest technologies. You will also have access to classrooms and materials anytime and anywhere.",
+  "TYcategories": [
+    {
+      "title": "Optimist Class",
+      "description": "It is a single-handed sailing boat considered the internationally approved class for juniors. The athletic age ranges from 6 to 15 years. Multiple international championships are organized for this class, but it is not considered an Olympic class."
+    },
+    {
+      "title": "ILCA 4 Class",
+      "description": "It is a single-handed sailing boat and the first boat in the youth category. The athletic age ranges from 15 to 17 years. International championships are also held for this class, but it is not considered an Olympic class."
+    },
+    {
+      "title": "ILCA 6 Class",
+      "description": "It is a single-handed sailing boat and the first boat in the youth category. The athletic age ranges from 15 to 17 years. International championships are also held for this class, but it is not considered an Olympic class."
+    },
+    {
+      "title": "ILCA 7 Class",
+      "description": "It is a single-handed sailing boat and the officially approved Olympic boat. The athletic age starts from 19 years old with no upper age limit. Various international championships are organized for this class, the most notable being the World Championship and the Summer Olympics."
+    },
+    {
+      "title": "Hobie Cat Class - Hobie Cat 16",
+      "description": "It is a multi-hull boat and a double-handed boat considered one of the fastest and most challenging classes. The athletic age starts from 15 years old as a minimum with no upper age limit. Its international championships are recognized by the international federation but it is not an Olympic class."
+    },
+    {
+      "title": "Windsurfing Class",
+      "description": "Windsurfing includes multiple categories, all of which have internationally recognized championships. Among the most important classes are Bic Techno 293, which is the youth championship class, and X-RS, which is the Olympic-approved class. Age categories start from 12 years and above."
+    }
+  ],
+  "contentusTitel": "Do you have a specific inquiry or are you looking to explore new opportunities? Our experienced team is ready to collaborate with you.",
+  "aboutUs": {
+    "title": "The Leadership Journey",
+    "description": "Since 2015, we have been leading the marine sports movement in Libya .",
+    "historySection": "Our Story",
+    "content": [
+      "In late 2015, Mr. Mahmoud Abdulrazzaq Bin Latif conceived the idea of establishing a club dedicated to the sport of sailing. A group of coaches and experienced individuals in marine sports and games, who had diverse and outstanding experiences in sailing, were immediately invited. They agreed to adopt the idea of founding a club and named it the Libyan Yacht Club, inspired by the first sailing club in history.",
+      "The founders rallied to establish this club, aware of the absence of an institution that meets the needs of Tripoli in the field of marine sports. Motivated by patriotism, this founding group decided to work on filling this gap for Tripoli and its residents.",
+      "The founders faced numerous challenges, the first of which was finding a suitable location and equipment to start. The search was arduous, spanning the Tripoli coastline. Many ideal locations were unavailable due to various complications. Finally, the founders found a suitable location with favorable terrain and support from local residents. This location became the club’s current headquarters in the Andalus Municipality, where work commenced in May 2016.",
+      "بدأ العمل على الأرض في مايو 2016، وانطلقت اللجنة التسييرية برئاسة السيد هاشم عبدالرزاق الرعوبي بعد أن تم الإجماع عليه لقيادة دفة إدارة النادي. بدأت اللجنة بالعمل على تنفيذ أهداف النادي، وتم وضع خطوات تنفيذية لتحقيق هذه الأهداف.",
+      "من خلال برامج تدريبية وتعريفية بالرياضة، تم إدراج مجموعة من البرامج لتغطية احتياجات الشباب من الناحية الفكرية، النفسية، والبدنية، وتنمية المواهب الرياضية، بالإضافة إلى حملات العمل التطوعي لخدمة المجتمع."
+    ],
+
+    "goalsSection": "Our Goals"
+  },
+  "Copyright": "© Libyan Yacht Club - All Rights Reserved"
 }

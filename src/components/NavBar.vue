@@ -4,10 +4,10 @@ import { mdiWeb } from '@mdi/js'
 
 <template>
   <div>
-    <nav class="h-20 w-full bg-white/10 backdrop-blur-sm sticky top-0">
+    <nav class="h-28 w-full bg-white/10 backdrop-blur-sm sticky top-0">
       <div class="flex items-center justify-between">
         <!-- الشعار -->
-        <img src="../assets/imeges/emptylogo.png" width="60" alt="main-logo" class="m-2 ml-10" />
+        <img src="../assets/imeges/emptylogo.png" width="90" alt="main-logo" class="m-2 ml-10" />
 
         <!-- القائمة -->
         <div>
@@ -17,6 +17,20 @@ import { mdiWeb } from '@mdi/js'
                 class="hover:text-[#394A98] hover:scale-110 duration-150 transition hover:cursor-pointer"
               >
                 {{ $t('Nav["home"]') }}
+              </li>
+            </RouterLink>
+            <RouterLink :to="{ name: 'ProgramsPage' }">
+              <li
+                class="hover:text-[#394A98] hover:scale-110 duration-150 transition hover:cursor-pointer"
+              >
+                {{ $t('Nav["Programs"]') }}
+              </li>
+            </RouterLink>
+            <RouterLink :to="{ name: 'Advertisements' }">
+              <li
+                class="hover:text-[#394A98] hover:scale-110 duration-150 transition hover:cursor-pointer"
+              >
+                {{ $t('Nav["Advertisements"]') }}
               </li>
             </RouterLink>
             <RouterLink :to="{ name: 'PhotoGallery' }">

@@ -51,20 +51,25 @@ const toggelMinu = () => {
         >
           <!-- <li class="py-2 border-b-2 border-bluee-sec w-full text-center"> -->
           <li v-motion-pop class="py-2 border-b-2 border-bluee-sec w-full text-center">
-            <RouterLink :to="{ name: 'home' }"> الرئيسي </RouterLink>
+            <RouterLink :to="{ name: 'home' }"> {{ $t('Nav["home"]') }} </RouterLink>
+          </li>
+          <li v-motion-pop class="py-2 border-b-2 border-bluee-sec w-full text-center">
+            <RouterLink :to="{ name: 'ProgramsPage' }"> {{ $t('Nav["Programs"]') }}</RouterLink>
           </li>
           <li v-motion-pop :delay="200" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-            <RouterLink :to="{ name: 'PhotoGallery' }"> معرض الصور </RouterLink>
+            <RouterLink :to="{ name: 'PhotoGallery' }"> {{ $t('Nav["PhotoGallery"]') }}</RouterLink>
           </li>
           <li v-motion-pop :delay="300" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-            <RouterLink :to="{ name: 'about' }"> عن النادي </RouterLink>
+            <RouterLink :to="{ name: 'about' }"> {{ $t('Nav["about"]') }} </RouterLink>
           </li>
 
           <li v-motion-pop :delay="400" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-            <RouterLink :to="{ name: 'GoldenHistory' }"> السجل الذهبي </RouterLink>
+            <RouterLink :to="{ name: 'GoldenHistory' }">
+              {{ $t('Nav["GoldenHistory"]') }}
+            </RouterLink>
           </li>
           <li v-motion-pop :delay="400" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-            تواصل معنا
+            {{ $t('Nav["contact"]') }}
           </li>
           <div class="flex p-4 mr-4 gap-3">
             <select

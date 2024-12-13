@@ -19,8 +19,8 @@ function loadLocaleMessages() {
 }
 
 const i18nOptions: I18nOptions = {
-  locale: 'en',
-  fallbackLocale: 'en',
+  locale: 'ar',
+  fallbackLocale: 'ar',
   messages: loadLocaleMessages(),
 }
 
