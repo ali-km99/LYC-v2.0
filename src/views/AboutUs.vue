@@ -48,16 +48,46 @@ const ENprograms = [
 ]
 
 const objectives = [
-  'إعداد و تدريب الشباب',
-  'تشكيل أوقات الشباب ببرامج تربوية وثقافية وترفيهية وما يعود عليهم بالفوائد النفسية والوطنية والفكرية والاجتماعية والبدنية والصحية',
-  'نشر الرياضة البحرية وتحفيز كافة شرائح المجتمع على ممارسة الرياضات البحرية',
-  'اكتشاف و تنمية المواهب الرياضية، وتكوين وإعداد الفرق الرياضية للألعاب الجماعية والفردية والمشاركة في المسابقات',
+  {
+    title: 'تدريب وتطوير الشباب',
+    content:
+      'إشراك الشباب في برامج تعليمية وثقافية وترفيهية توفر فوائد نفسية وروحية وفكرية واجتماعية وبدنية وصحية.',
+  },
+  {
+    title: 'تشجيع الرياضات البحرية',
+    content: 'تشجيع جميع فئات المجتمع، بمختلف الأعمار، على ممارسة الرياضات البحرية.',
+  },
+  {
+    title: 'اكتشاف وتطوير المواهب',
+    content:
+      'التعرف على المواهب الرياضية ورعايتها، وتكوين وإعداد فرق لكل من الرياضات الفردية والجماعية، والمشاركة في المسابقات التي تنظمها الاتحادات الرياضية.',
+  },
+  {
+    title: 'العمل الجماعي المنظم وبرامج التطوع',
+    content: 'تنفيذ برامج العمل الجماعي المنظم وحملات التطوع التي تهدف إلى خدمة المجتمع.',
+  },
 ]
 const ENobjectives = [
-  'Training and preparing youth',
-  'Engaging youth in educational, cultural, and recreational programs that provide psychological, national, intellectual, social, physical, and health benefits',
-  'Promoting marine sports and encouraging all segments of society to practice them',
-  'Discovering and developing athletic talents, forming and preparing teams for individual and group sports, and participating in competitions',
+  {
+    title: 'Youth Training and Development',
+    content:
+      'Engaging youth in educational, cultural, and recreational programs that provide psychological, spiritual, intellectual, social, physical, and health benefits.',
+  },
+  {
+    title: 'Promoting Marine Sports',
+    content:
+      'Encouraging all segments of society, across different age groups, to practice marine sports.',
+  },
+  {
+    title: 'Talent Discovery and Development',
+    content:
+      'Identifying and nurturing sports talents, forming and preparing teams for both individual and team sports, and participating in competitions organized by sports federations.',
+  },
+  {
+    title: 'Organized Group Work and Volunteer Programs',
+    content:
+      'Implementing organized group work programs and volunteer campaigns aimed at serving the community.',
+  },
 ]
 </script>
 
@@ -83,14 +113,37 @@ const ENobjectives = [
     <div class="container mx-auto px-4 py-8 bg-[#8897B9] lg:bg-white">
       <!-- History Section -->
       <div class="bg-slate-100 rounded-lg shadow-lg p-8 mb-8">
-        <div class="flex w-full justify-around items-center mb-7">
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet6.png" alt="" />
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet1.png" alt="" />
-          <h2 class="text-2xl font-bold text-blue-900 text-right">
+        <div class="flex flex-col items-center w-full mb-7">
+          <!-- الصور: تظهر في شاشات الموبايل فوق العنوان فقط -->
+          <div class="flex flex-wrap justify-center md:hidden w-full mb-4">
+            <img class="lg:w-14 w-8 mb-2" src="../assets/flags/L.png" alt="" />
+            <img class="lg:w-14 w-8 mb-2" src="../assets/flags/Y.png" alt="" />
+            <img class="lg:w-14 w-8 mb-2" src="../assets/flags/C.png" alt="" />
+          </div>
+
+          <!-- العنوان: يظهر دائمًا في المنتصف -->
+          <h2 class="lg:hidden text-2xl font-bold text-blue-900 mx-3 text-center w-full my-3">
             {{ $t('aboutUs.historySection') }}
           </h2>
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet2.png" alt="" />
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet3.png" alt="" />
+
+          <!-- الصور: تظهر بجانب العنوان في الشاشات الكبيرة فقط -->
+          <div class="hidden md:flex justify-between items-center w-full">
+            <!-- الصور على اليمين -->
+            <div class="flex items-center">
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/L.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/Y.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/C.png" alt="" />
+            </div>
+            <h2 class="text-2xl font-bold text-blue-900 mx-3 text-center w-full my-3">
+              {{ $t('aboutUs.historySection') }}
+            </h2>
+            <!-- الصور على اليسار -->
+            <div class="flex items-center">
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/L.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/Y.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/C.png" alt="" />
+            </div>
+          </div>
         </div>
         <div class="text-center flex flex-col items-center">
           <p class="text-gray-700 lg:w-3/4 w-full mb-3 text-center px-2 lg:px-10">
@@ -108,24 +161,23 @@ const ENobjectives = [
             />
           </div>
 
-          <p class="text-gray-700 lg:w-3/4 w-full mb-3 text-center px-2 lg:px-10">
+          <p class="text-gray-700 lg:w-3/4 w-full my-6 text-center px-2 lg:px-10">
             {{ $t('aboutUs.content[2]') }}
           </p>
-          <div class="grid grid-cols-3 gap-4 w-full px-20">
-            <!-- <img
-              width="1200px"
-              src="../assets/imeges/aboutUs.jpg"
-              class="rounded-lg"
-              alt="صورة اعضاء تأسيس النادي"
-            /> -->
-
-            <div class="bg-sky-400 rounded-full shadow-lg h-72 w-72 overflow-hidden">
+          <div class="grid grid-cols-3 gap-4 w-full lg:px-20 my-6">
+            <div
+              class="bg-sky-400 rounded-full shadow-lg lg:h-72 lg:w-72 w-28 h-28 overflow-hidden"
+            >
               <img src="../assets/imeges/image7.jpg" class="h-full" alt="" />
             </div>
-            <div class="bg-sky-400 rounded-full shadow-lg h-72 w-72 overflow-hidden">
+            <div
+              class="bg-sky-400 rounded-full shadow-lg lg:h-72 lg:w-72 w-28 h-28 overflow-hidden"
+            >
               <img src="../assets/imeges/golden2017kids5.jpg" class="h-full" alt="" />
             </div>
-            <div class="bg-sky-400 rounded-full shadow-lg h-72 w-72 overflow-hidden">
+            <div
+              class="bg-sky-400 rounded-full shadow-lg lg:h-72 lg:w-72 w-28 h-28 overflow-hidden"
+            >
               <img src="../assets/imeges/golden2017kids2.jpg" class="h-full" alt="" />
             </div>
           </div>
@@ -140,17 +192,43 @@ const ENobjectives = [
       <div class="bg-slate-100 rounded-lg shadow-md p-6 lg:p-10 mb-8">
         <!-- Header Section -->
 
-        <div class="flex w-full justify-around items-center mb-7">
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet6.png" alt="" />
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet1.png" alt="" />
-          <h2 class="text-2xl font-bold text-blue-900 text-right">
+        <div class="flex flex-col items-center w-full mb-7">
+          <!-- الصور: تظهر في شاشات الموبايل فوق العنوان فقط -->
+          <div class="flex flex-wrap justify-center md:hidden w-full mb-4">
+            <img class="lg:w-14 w-8 mb-2" src="../assets/flags/L.png" alt="" />
+            <img class="lg:w-14 w-8 mb-2" src="../assets/flags/Y.png" alt="" />
+            <img class="lg:w-14 w-8 mb-2" src="../assets/flags/C.png" alt="" />
+          </div>
+
+          <!-- العنوان: يظهر دائمًا في المنتصف -->
+          <h2 class="lg:hidden text-2xl font-bold text-blue-900 mx-3 text-center w-full my-3">
             {{ $t('aboutUs.nameMeaning.title') }}
           </h2>
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet2.png" alt="" />
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet3.png" alt="" />
+
+          <!-- الصور: تظهر بجانب العنوان في الشاشات الكبيرة فقط -->
+          <div class="hidden md:flex justify-between items-center w-full">
+            <!-- الصور على اليمين -->
+            <div class="flex items-center">
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/L.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/Y.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/C.png" alt="" />
+            </div>
+            <h2 class="text-2xl font-bold text-blue-900 mx-3 text-center w-full my-3">
+              {{ $t('aboutUs.nameMeaning.title') }}
+            </h2>
+            <!-- الصور على اليسار -->
+            <div class="flex items-center">
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/L.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/Y.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/C.png" alt="" />
+            </div>
+          </div>
         </div>
         <!-- Content Section -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div
+          :dir="$i18n.locale == 'ar' ? 'rtl' : 'ltr'"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+        >
           <!-- Text Section -->
           <div>
             <p
@@ -177,24 +255,51 @@ const ENobjectives = [
         :dir="$i18n.locale == 'ar' ? 'rtl' : 'ltr'"
         class="bg-slate-100 rounded-lg shadow-lg p-8"
       >
-        <div class="flex w-full justify-around items-center mb-7">
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet6.png" alt="" />
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet1.png" alt="" />
-          <h2 class="text-2xl font-bold text-blue-900 mx-3">{{ $t('aboutUs.goalsSection') }}</h2>
+        <div class="flex flex-col items-center w-full mb-7">
+          <!-- الصور: تظهر في شاشات الموبايل فوق العنوان فقط -->
+          <div class="flex flex-wrap justify-center md:hidden w-full mb-4">
+            <img class="lg:w-14 w-8 mb-2" src="../assets/flags/L.png" alt="" />
+            <img class="lg:w-14 w-8 mb-2" src="../assets/flags/Y.png" alt="" />
+            <img class="lg:w-14 w-8 mb-2" src="../assets/flags/C.png" alt="" />
+          </div>
 
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet2.png" alt="" />
-          <img class="lg:w-14 w-8" src="../assets/flags/alphabet3.png" alt="" />
+          <!-- العنوان: يظهر دائمًا في المنتصف -->
+          <h2 class="lg:hidden text-2xl font-bold text-blue-900 mx-3 text-center w-full my-3">
+            {{ $t('aboutUs.goalsSection') }}
+          </h2>
+
+          <!-- الصور: تظهر بجانب العنوان في الشاشات الكبيرة فقط -->
+          <div class="hidden md:flex justify-between items-center w-full">
+            <!-- الصور على اليمين -->
+            <div class="flex items-center">
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/L.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/Y.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/C.png" alt="" />
+            </div>
+            <h2 class="text-2xl font-bold text-blue-900 mx-3 text-center w-full my-3">
+              {{ $t('aboutUs.goalsSection') }}
+            </h2>
+            <!-- الصور على اليسار -->
+            <div class="flex items-center">
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/L.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/Y.png" alt="" />
+              <img class="lg:w-14 w-8 mb-2" src="../assets/flags/C.png" alt="" />
+            </div>
+          </div>
         </div>
-        <ul class="space-y-4">
-          <li
+        <div class="grid lg:grid-cols-2 gap-2">
+          <div
             v-for="objective in $i18n.locale == 'ar' ? objectives : ENobjectives"
-            :key="objective"
-            class="flex space-x-3 text-right"
+            :key="objective.content"
           >
-            <span class="text-blue-600">⚓</span>
-            <span class="text-gray-700">{{ objective }}</span>
-          </li>
-        </ul>
+            <div class="my-2">
+              <span class="text-blue-600"></span>
+              <p class="text-blue-600 text-xl font-semibold">{{ ' ⚓ ' + objective.title }}</p>
+
+              <p class="text-gray-700 w-2/3 m-6">{{ objective.content }}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Programs Section -->

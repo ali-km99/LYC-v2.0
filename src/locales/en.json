@@ -4,7 +4,7 @@
     "PhotoGallery": " Photo Gallery",
     "about": "About  ",
     "GoldenHistory": " Golden History  ",
-    "Programs": "Programs  ",
+    "Programs": "Programs & Activities  ",
     "Advertisements": "  Advertisements ",
     "contact": "Contact Us ",
     "lang": "Locale"
@@ -45,6 +45,14 @@
     {
       "title": "Windsurfing Class",
       "description": "Windsurfing includes multiple categories, all of which have internationally recognized championships. Among the most important classes are Bic Techno 293, which is the youth championship class, and X-RS, which is the Olympic-approved class. Age categories start from 12 years and above."
+    },
+    {
+      "title": "Olympic Rowing",
+      "description": "Rowing is a sport that relies on the athlete's physical effort. The club trains on the Olympic Sculls category, which can be practiced starting from junior age and light weight up to heavyweight categories."
+    },
+    {
+      "title": "Indoor Rowing",
+      "description": "This is a simulated rowing sport where athletes gather inside sports halls to compete using the ergometer device."
     }
   ],
   "contentusTitel": "Do you have a specific inquiry or are you looking to explore new opportunities? Our experienced team is ready to collaborate with you.",
@@ -56,11 +64,19 @@
       "In late 2015, Mr. Mahmoud Abdulrazzaq Bin Latif conceived the idea of establishing a club dedicated to the sport of sailing. A group of coaches and experienced individuals in marine sports and games, who had diverse and outstanding experiences in sailing, were immediately invited. They agreed to adopt the idea of founding a club and named it the Libyan Yacht Club, inspired by the first sailing club in history.",
       "The founders rallied to establish this club, aware of the absence of an institution that meets the needs of Tripoli in the field of marine sports. Motivated by patriotism, this founding group decided to work on filling this gap for Tripoli and its residents.",
       "The founders faced numerous challenges, the first of which was finding a suitable location and equipment to start. The search was arduous, spanning the Tripoli coastline. Many ideal locations were unavailable due to various complications. Finally, the founders found a suitable location with favorable terrain and support from local residents. This location became the club’s current headquarters in the Andalus Municipality, where work commenced in May 2016.",
-      "بدأ العمل على الأرض في مايو 2016، وانطلقت اللجنة التسييرية برئاسة السيد هاشم عبدالرزاق الرعوبي بعد أن تم الإجماع عليه لقيادة دفة إدارة النادي. بدأت اللجنة بالعمل على تنفيذ أهداف النادي، وتم وضع خطوات تنفيذية لتحقيق هذه الأهداف.",
-      "من خلال برامج تدريبية وتعريفية بالرياضة، تم إدراج مجموعة من البرامج لتغطية احتياجات الشباب من الناحية الفكرية، النفسية، والبدنية، وتنمية المواهب الرياضية، بالإضافة إلى حملات العمل التطوعي لخدمة المجتمع."
+      "Work on the ground began in May 2016, and the Steering Committee was launched under the leadership of Mr. Hashim Abdulrazzaq Al-Raoubi, who was unanimously chosen to steer the management of the club. The committee began implementing the club’s goals and set actionable steps to achieve these objectives.",
+      "Through training and awareness programs about the sport, a variety of initiatives were introduced to address the intellectual, psychological, and physical needs of young people, develop athletic talents, and promote volunteer work campaigns to serve the community."
     ],
 
-    "goalsSection": "Our Goals"
+    "goalsSection": "Our Goals",
+    "nameMeaning": {
+      "title": "⛵ LYC - The Story Behind the Name of the Libyan Yacht Club",
+      "content": [
+        "The name of our club is inspired by the world’s first sailing club. This name is very popular, as almost every country or city has a sailing club bearing the name 'Yacht Club.' Following the example of sailing and yacht clubs around the world, we adopted this name since the club's establishment in 2015 in Tripoli.",
+        "Additionally, the word 'yacht' originally derives from the Dutch word (jacht), meaning 'hunt.' It was used to refer to fast sailing ships previously employed by the Dutch Navy to chase and capture pirates. Later, it became a classification for boats used in competitions and sailing, moving away from the stereotypical association of yachts with only large, luxurious, or steam-powered boats."
+      ]
+    }
   },
-  "Copyright": "© Libyan Yacht Club - All Rights Reserved"
+  "Copyright": "© Libyan Yacht Club - All Rights Reserved",
+  "Advertisements": "Libyan Yacht Club Advertisements"
 }

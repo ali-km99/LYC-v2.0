@@ -14,7 +14,7 @@ defineEmits<{
 
 <template>
   <Modal :is-open="isOpen" :title="program.title" @close="$emit('close')">
-    <div class="text-right">
+    <div :class="$i18n.locale == 'ar' ? 'text-right' : 'text-left'">
       <div class="p-10">
         <img :src="program.img" alt="" class="rounded-lg w-2/3 mx-auto hidden lg:block" />
       </div>

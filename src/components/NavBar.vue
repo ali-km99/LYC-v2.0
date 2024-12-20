@@ -38,11 +38,7 @@ import { mdiWeb } from '@mdi/js'
                 {{ $t('Nav["PhotoGallery"]') }}
               </li>
             </RouterLink>
-            <RouterLink :to="{ name: 'about' }">
-              <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition">
-                {{ $t('Nav["about"]') }}
-              </li>
-            </RouterLink>
+
             <RouterLink :to="{ name: 'GoldenHistory' }">
               <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition">
                 {{ $t('Nav["GoldenHistory"]') }}
@@ -51,6 +47,11 @@ import { mdiWeb } from '@mdi/js'
             <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition">
               <a href="#contact"> {{ $t('Nav["contact"]') }} </a>
             </li>
+            <RouterLink :to="{ name: 'about' }">
+              <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition">
+                {{ $t('Nav["about"]') }}
+              </li>
+            </RouterLink>
           </ul>
         </div>
 

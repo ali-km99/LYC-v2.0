@@ -5,37 +5,37 @@
   <div class="relative bg-blue-500"><SmallNavbar /></div>
   <div class="bg-gray-100 min-h-screen p-6" dir="rtl">
     <!-- Page Header -->
-    <h1 class="text-4xl font-bold text-primary text-center mb-12">اعلانات النادي الليبي لليخوت</h1>
+    <h1 class="text-4xl font-bold text-primary text-center mb-12">{{ $t('Advertisements') }}</h1>
 
     <!-- Announcements Section -->
     <div class="mt-6 space-y-6" v-if="races.length">
       <div v-for="race in races" :key="race.id" class="bg-white shadow-md rounded-md p-6">
         <!-- Race Header -->
         <div class="border-b pb-4 mb-4">
-          <h2 class="text-xl font-semibold">{{ race.title }}</h2>
+          <h2 class="text-xl font-semibold">{{ 'عنوان البطولة : ' + race.title }}</h2>
           <p class="text-gray-500">{{ race.location }}</p>
         </div>
 
         <!-- Race Details -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
+          <div class="bg-slate-100 p-2 rounded-lg">
             <h3 class="font-semibold">معلومات البطولة</h3>
-            <p>{{ race.info }}</p>
+            <p class="text-gray-500">{{ race.info }}</p>
           </div>
-          <div>
+          <div class="bg-slate-100 p-2 rounded-lg">
             <h3 class="font-semibold">قواعد و معدات</h3>
-            <p>{{ race.rules }}</p>
+            <p class="text-gray-500">{{ race.rules }}</p>
           </div>
-          <div>
+          <div class="bg-slate-100 p-2 rounded-lg">
             <h3 class="font-semibold">الإقامة و الإعاشة</h3>
-            <p>{{ race.accommodation }}</p>
+            <p class="text-gray-500">{{ race.accommodation }}</p>
           </div>
         </div>
 
         <!-- Race Schedule -->
-        <div class="mt-4">
+        <div class="mt-4 w-1/3 bg-slate-100 p-2 rounded-lg">
           <h3 class="font-semibold">البرنامج الزمني</h3>
-          <ul class="list-disc ml-6">
+          <ul class="list-disc mr-6">
             <li v-for="schedule in race.schedule" :key="schedule.time">
               <span>{{ schedule.date }}</span> - <span>{{ schedule.time }}</span
               >: <span>{{ schedule.event }}</span>
@@ -83,6 +83,50 @@ import SmallNavbar from '@/components/SmallNavbar.vue'
 import { ref } from 'vue'
 
 const races = ref([
+  {
+    id: 1,
+    title: 'بطولة البحر المتوسط الصيفية 2024',
+    location: 'ميناء طرابلس، ليبيا',
+    info: 'بطولة سنوية تضم أفضل البحارة من منطقة البحر المتوسط.',
+    rules: 'تطبق قواعد سباقات الإبحار العالمية 2021-2024.',
+    accommodation: 'خصومات خاصة في فندق المارينا مع توفير وجبات.',
+    schedule: [
+      { date: '2024-07-01', time: '09:00', event: 'التسجيل' },
+      { date: '2024-07-01', time: '14:00', event: 'السباق التجريبي' },
+      { date: '2024-07-02', time: '10:00', event: 'يوم السباق الأول' },
+      { date: '2024-07-03', time: '10:00', event: 'يوم السباق الثاني' },
+      { date: '2024-07-04', time: '10:00', event: 'يوم السباق الثالث' },
+      { date: '2024-07-04', time: '18:00', event: 'حفل التتويج' },
+    ],
+    registration: {
+      deadline: '2024-06-15',
+      fee: '$250',
+      process: 'التسجيل عبر الإنترنت من خلال موقع النادي.',
+      link: '#',
+    },
+  },
+  {
+    id: 1,
+    title: 'بطولة البحر المتوسط الصيفية 2024',
+    location: 'ميناء طرابلس، ليبيا',
+    info: 'بطولة سنوية تضم أفضل البحارة من منطقة البحر المتوسط.',
+    rules: 'تطبق قواعد سباقات الإبحار العالمية 2021-2024.',
+    accommodation: 'خصومات خاصة في فندق المارينا مع توفير وجبات.',
+    schedule: [
+      { date: '2024-07-01', time: '09:00', event: 'التسجيل' },
+      { date: '2024-07-01', time: '14:00', event: 'السباق التجريبي' },
+      { date: '2024-07-02', time: '10:00', event: 'يوم السباق الأول' },
+      { date: '2024-07-03', time: '10:00', event: 'يوم السباق الثاني' },
+      { date: '2024-07-04', time: '10:00', event: 'يوم السباق الثالث' },
+      { date: '2024-07-04', time: '18:00', event: 'حفل التتويج' },
+    ],
+    registration: {
+      deadline: '2024-06-15',
+      fee: '$250',
+      process: 'التسجيل عبر الإنترنت من خلال موقع النادي.',
+      link: '#',
+    },
+  },
   {
     id: 1,
     title: 'بطولة البحر المتوسط الصيفية 2024',
