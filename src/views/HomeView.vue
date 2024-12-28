@@ -119,7 +119,7 @@ import {
               />
               <img
                 v-if="i === 1"
-                src="../assets/imeges/Group2.png"
+                src="../assets/imeges/a22.jpg"
                 alt=""
                 class="mx-auto h-96 object-cover rounded-lg shadow-lg hidden lg:block"
               />
@@ -191,7 +191,7 @@ import {
           v-motion-slide-visible-bottom
           :delay="600"
           :duration="1500"
-          src="../assets/imeges/a56.jpg"
+          src="../assets/imeges/history11.jpg"
           class="rounded-lg bg-gray-100 w-full"
         />
         <img
@@ -222,7 +222,7 @@ import {
           class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8"
         >
           <div
-            class="border-t border-gray-200 pt-4"
+            class="border-t border-gray-200 pt-4 lg:mb-7"
             v-motion-slide-visible-bottom
             :delay="100"
             :duration="1500"
@@ -250,7 +250,7 @@ import {
           </div>
 
           <div
-            class="border-t border-gray-200 pt-4"
+            class="border-t border-gray-200 pt-4 lg:mb-7"
             v-motion-slide-visible-bottom
             :delay="500"
             :duration="1500"
@@ -278,7 +278,7 @@ import {
           </div>
 
           <div
-            class="border-t border-gray-200 pt-4"
+            class="border-t border-gray-200 pt-4 lg:mb-7"
             v-motion-slide-visible-bottom
             :delay="600"
             :duration="1500"
