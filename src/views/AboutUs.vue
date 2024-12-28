@@ -66,6 +66,11 @@ const objectives = [
     title: 'العمل الجماعي المنظم وبرامج التطوع',
     content: 'تنفيذ برامج العمل الجماعي المنظم وحملات التطوع التي تهدف إلى خدمة المجتمع.',
   },
+  {
+    title: 'شعل أوقات الشباب ببرامج تربويه و ثقافية',
+    content:
+      'شغل اوقات الشباب بمايعود عليهم بالفوائد النفسيه والروحية و الفكرية والإجتماعية و البدنية والصحية ',
+  },
 ]
 const ENobjectives = [
   {
@@ -88,11 +93,16 @@ const ENobjectives = [
     content:
       'Implementing organized group work programs and volunteer campaigns aimed at serving the community.',
   },
+  {
+    title: 'Engage Youth Time with Educational and Cultural Programs',
+    content:
+      'Engage youth in activities that provide psychological, spiritual, intellectual, social, physical, and health benefits.',
+  },
 ]
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#8897B9] lg:bg-white">
+  <div class="min-h-screen bg-[#0B6D90] lg:bg-white">
     <!-- Hero Section with Fixed Background -->
     <div class="hero-section lg:bg-about bg-aboutSmall w-full relative mb-8">
       <div class="absolute inset-0"></div>
@@ -110,7 +120,7 @@ const ENobjectives = [
       </div>
     </div>
 
-    <div class="container mx-auto px-4 py-8 bg-[#8897B9] lg:bg-white">
+    <div class="container mx-auto px-4 py-8 bg-[#0B6D90] lg:bg-white">
       <!-- History Section -->
       <div class="bg-slate-100 rounded-lg shadow-lg p-8 mb-8">
         <div class="flex flex-col items-center w-full mb-7">
@@ -168,17 +178,17 @@ const ENobjectives = [
             <div
               class="bg-sky-400 rounded-full shadow-lg lg:h-72 lg:w-72 w-28 h-28 overflow-hidden"
             >
-              <img src="../assets/imeges/image7.jpg" class="h-full" alt="" />
+              <img src="../assets/imeges/image10.jpg" class="h-full" alt="" />
             </div>
             <div
               class="bg-sky-400 rounded-full shadow-lg lg:h-72 lg:w-72 w-28 h-28 overflow-hidden"
             >
-              <img src="../assets/imeges/golden2017kids5.jpg" class="h-full" alt="" />
+              <img src="../assets/imeges/a54.jpg" class="h-full" alt="" />
             </div>
             <div
               class="bg-sky-400 rounded-full shadow-lg lg:h-72 lg:w-72 w-28 h-28 overflow-hidden"
             >
-              <img src="../assets/imeges/golden2017kids2.jpg" class="h-full" alt="" />
+              <img src="../assets/imeges/a52.jpg" class="h-full" alt="" />
             </div>
           </div>
           <p class="text-gray-700 lg:w-3/4 w-full mb-3 text-center px-2 lg:px-10">

@@ -4,52 +4,53 @@ import { mdiWeb } from '@mdi/js'
 
 <template>
   <div>
-    <nav class="h-28 w-full bg-white/10 backdrop-blur-sm sticky top-0">
+    <nav class="h-28 w-full bg-white/20 backdrop-blur-sm sticky top-0">
       <div class="flex items-center justify-between">
         <!-- الشعار -->
-        <img src="../assets/imeges/emptylogo.png" width="90" alt="main-logo" class="m-2 ml-10" />
+        <img src="../assets/imeges/logo2.png" width="100px" alt="main-logo" class="m-2 ml-10" />
 
         <!-- القائمة -->
         <div>
-          <ul class="flex flex-row gap-10 text-white">
-            <RouterLink :to="{ name: 'home' }">
-              <li
-                class="hover:text-[#394A98] hover:scale-110 duration-150 transition hover:cursor-pointer"
-              >
-                {{ $t('Nav["home"]') }}
-              </li>
-            </RouterLink>
-            <RouterLink :to="{ name: 'ProgramsPage' }">
-              <li
-                class="hover:text-[#394A98] hover:scale-110 duration-150 transition hover:cursor-pointer"
-              >
-                {{ $t('Nav["Programs"]') }}
-              </li>
-            </RouterLink>
+          <ul :dir="$i18n.locale == 'ar' ? 'ltr' : 'rtl'" class="flex flex-row gap-10 text-white">
+            <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition text-lg">
+              <a href="#contact"> {{ $t('Nav["contact"]') }} </a>
+            </li>
             <RouterLink :to="{ name: 'Advertisements' }">
               <li
-                class="hover:text-[#394A98] hover:scale-110 duration-150 transition hover:cursor-pointer"
+                class="hover:text-[#394A98] hover:scale-110 duration-150 transition text-lg hover:cursor-pointer"
               >
                 {{ $t('Nav["Advertisements"]') }}
               </li>
             </RouterLink>
+
             <RouterLink :to="{ name: 'PhotoGallery' }">
-              <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition">
+              <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition text-lg">
                 {{ $t('Nav["PhotoGallery"]') }}
               </li>
             </RouterLink>
 
             <RouterLink :to="{ name: 'GoldenHistory' }">
-              <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition">
+              <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition text-lg">
                 {{ $t('Nav["GoldenHistory"]') }}
               </li>
             </RouterLink>
-            <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition">
-              <a href="#contact"> {{ $t('Nav["contact"]') }} </a>
-            </li>
+            <RouterLink :to="{ name: 'ProgramsPage' }">
+              <li
+                class="hover:text-[#394A98] hover:scale-110 duration-150 transition text-lg hover:cursor-pointer"
+              >
+                {{ $t('Nav["Programs"]') }}
+              </li>
+            </RouterLink>
             <RouterLink :to="{ name: 'about' }">
-              <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition">
+              <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition text-lg">
                 {{ $t('Nav["about"]') }}
+              </li>
+            </RouterLink>
+            <RouterLink :to="{ name: 'home' }">
+              <li
+                class="hover:text-[#394A98] hover:scale-110 duration-150 transition text-lg hover:cursor-pointer"
+              >
+                {{ $t('Nav["home"]') }}
               </li>
             </RouterLink>
           </ul>

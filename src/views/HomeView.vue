@@ -174,14 +174,35 @@ import {
           class="rounded-lg bg-gray-100"
         />
         <img
-          v-motion-slide-visible-bottom
+          v-motion-slide-visible-left
           :delay="600"
           :duration="1500"
           src="../assets/imeges/typs6.jpg"
           class="rounded-lg bg-gray-100"
         />
         <img
+          v-motion-slide-visible-top
+          :delay="600"
+          :duration="1500"
+          src="../assets/imeges/typs7.jpg"
+          class="rounded-lg bg-gray-100 col-span-2"
+        />
+        <img
           v-motion-slide-visible-bottom
+          :delay="600"
+          :duration="1500"
+          src="../assets/imeges/a56.jpg"
+          class="rounded-lg bg-gray-100 w-full"
+        />
+        <img
+          v-motion-slide-visible-left
+          :delay="600"
+          :duration="1500"
+          src="../assets/imeges/image12.jpg"
+          class="rounded-lg bg-gray-100"
+        />
+        <img
+          v-motion-slide-visible-top
           :delay="600"
           :duration="1500"
           src="../assets/imeges/image7.jpg"

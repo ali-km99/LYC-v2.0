@@ -9,16 +9,34 @@ import router from './router'
   <!-- Foooter -->
   <footer class="bg-[#3B82F6] relative bottom-0">
     <div class="px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-      <nav class="flex flex-wrap justify-center -mx-5 -my-2">
+      <nav
+        :dir="$i18n.locale == 'ar' ? 'ltr' : 'rtl'"
+        class="flex flex-wrap justify-center -mx-5 -my-2"
+      >
         <div class="px-5 py-2">
-          <a href="/aboutUs" class="text-base leading-6 text-white hover:text-gray-900">
-            {{ $t('Nav.about') }}
+          <a href="/Advertisements" class="text-base leading-6 text-white hover:text-gray-900">
+            {{ $t('Nav["Advertisements"]') }}
+          </a>
+        </div>
+        <div class="px-5 py-2">
+          <a href="/PhotoGallery" class="text-base leading-6 text-white hover:text-gray-900">
+            {{ $t('Nav.PhotoGallery') }}
           </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="/PhotoGallery" class="text-base leading-6 text-white hover:text-gray-900">
-            {{ $t('Nav.PhotoGallery') }}
+          <a href="/GoldenHistory" class="text-base leading-6 text-white hover:text-gray-900">
+            {{ $t('Nav.GoldenHistory') }}
+          </a>
+        </div>
+        <div class="px-5 py-2">
+          <a href="/Programs" class="text-base leading-6 text-white hover:text-gray-900">
+            {{ $t('Nav["Programs"]') }}
+          </a>
+        </div>
+        <div class="px-5 py-2">
+          <a href="/aboutUs" class="text-base leading-6 text-white hover:text-gray-900">
+            {{ $t('Nav.about') }}
           </a>
         </div>
         <div class="px-5 py-2">
@@ -27,12 +45,6 @@ import router from './router'
             class="text-base leading-6 text-white hover:text-gray-900"
           >
             {{ $t('Nav.home') }}
-          </a>
-        </div>
-
-        <div class="px-5 py-2">
-          <a href="/GoldenHistory" class="text-base leading-6 text-white hover:text-gray-900">
-            {{ $t('Nav.GoldenHistory') }}
           </a>
         </div>
       </nav>
