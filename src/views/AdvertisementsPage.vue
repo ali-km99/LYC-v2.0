@@ -33,15 +33,21 @@
         </div>
 
         <!-- Race Schedule -->
-        <div class="mt-4 w-1/3 bg-slate-100 p-2 rounded-lg">
-          <h3 class="font-semibold">البرنامج الزمني</h3>
-          <ul class="list-disc mr-6">
-            <li v-for="schedule in race.schedule" :key="schedule.time">
-              <span>{{ schedule.date }}</span> - <span>{{ schedule.time }}</span
-              >: <span>{{ schedule.event }}</span>
-            </li>
-          </ul>
-        </div>
+        <section class="grid lg:grid-cols-3 gap-4">
+          <div class="mt-4 bg-slate-100 p-2 rounded-lg">
+            <h3 class="font-semibold">البرنامج الزمني</h3>
+            <ul class="list-disc mr-6">
+              <li v-for="schedule in race.schedule" :key="schedule.time">
+                <span>{{ schedule.event }}</span> - <span>{{ schedule.time }}</span
+                >: <span>{{ schedule.date }}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-4 bg-slate-100 p-2 rounded-lg">
+            <h3 class="font-semibold py-4">مسار السباق</h3>
+            <img src="../assets/imeges/map1.jpg" alt="" class="w-[300px] mx-auto" />
+          </div>
+        </section>
 
         <!-- Registration Details -->
         <div class="mt-4">
@@ -87,9 +93,9 @@ const races = ref([
     id: 1,
     title: 'بطولة البحر المتوسط الصيفية 2024',
     location: 'ميناء طرابلس، ليبيا',
-    info: 'بطولة سنوية تضم أفضل البحارة من منطقة البحر المتوسط.',
-    rules: 'تطبق قواعد سباقات الإبحار العالمية 2021-2024.',
-    accommodation: 'خصومات خاصة في فندق المارينا مع توفير وجبات.',
+    info: 'abc...',
+    rules: 'abc...  ',
+    accommodation: 'abc...',
     schedule: [
       { date: '2024-07-01', time: '09:00', event: 'التسجيل' },
       { date: '2024-07-01', time: '14:00', event: 'السباق التجريبي' },
@@ -105,8 +111,6 @@ const races = ref([
       link: '#',
     },
   },
-
-
 ])
 
 const downloadAnnouncement = (raceId: number) => {
