@@ -28,7 +28,7 @@
 
         <div class="p-4 sm:p-6 bg-white">
           <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">{{ photo.title }}</h3>
-          <p class="text-sm sm:text-base text-slate-600">{{ photo.description }}</p>
+          <!-- <p class="text-sm sm:text-base text-slate-600">{{ photo.description }}</p> -->
         </div>
       </div>
     </div>

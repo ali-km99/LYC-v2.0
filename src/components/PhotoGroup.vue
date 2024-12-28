@@ -58,7 +58,7 @@
         >
           <div class="absolute bottom-0 p-3 sm:p-4 w-full">
             <h3 class="text-base sm:text-lg font-semibold text-white">{{ photo.title }}</h3>
-            <p class="text-xs sm:text-sm text-gray-200 line-clamp-2">{{ photo.description }}</p>
+            <!-- <p class="text-xs sm:text-sm text-gray-200 line-clamp-2">{{ photo.description }}</p> -->
           </div>
         </div>
       </div>

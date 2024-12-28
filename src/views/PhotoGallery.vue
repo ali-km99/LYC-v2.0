@@ -64,9 +64,8 @@ const filteredGroups = computed(() => {
     .map((group) => ({
       ...group,
       photos: group.photos.filter(
-        (photo) =>
-          photo.title.toLowerCase().includes(search) ||
-          photo.description.toLowerCase().includes(search),
+        (photo) => photo.title.toLowerCase().includes(search),
+        // || photo.description.toLowerCase().includes(search),
       ),
     }))
     .filter((group) => group.photos.length > 0)
