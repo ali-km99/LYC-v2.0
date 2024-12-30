@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import Navbar from '@/components/NavBar.vue'
 import SmallNavbar from '@/components/SmallNavbar.vue'
+import router from '@/router'
 
+// استلام الحدث
+const handleScrollEvent = async () => {
+  await router.replace('/') // الانتقال إلى الصفحة الرئيسية
+}
 const programs = [
   {
     title: 'تدريب السباحة',
@@ -109,7 +114,9 @@ const ENobjectives = [
       <div class="hidden lg:block">
         <Navbar />
       </div>
-      <div class="relative"><SmallNavbar color="bg-blue-500" /></div>
+      <div class="relative">
+        <SmallNavbar color="bg-blue-500" @scrollToSection="handleScrollEvent" />
+      </div>
       <div class="container mx-auto px-4 py-20 relative z-10">
         <div class="text-white text-center">
           <h1 class="text-5xl font-bold mb-6">{{ $t('aboutUs.title') }}</h1>

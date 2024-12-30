@@ -335,11 +335,11 @@ import {
     </div>
   </section>
 
-  <section class="p-2 px-8 my-6">
+  <section id="contact" class="p-2 px-8 my-6">
     <div
       class="grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-8 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white mt-4 before:absolute before:right-0 before:w-[300px] before:bg-blue-500 before:h-full max-md:before:hidden"
     >
-      <div id="contact">
+      <div>
         <h2 class="text-blue-600 text-3xl font-bold text-end">{{ $t("Nav['contact']") }}</h2>
         <p class="text-sm text-gray-500 mt-4 leading-relaxed text-end">
           {{ $t('contentusTitel') }}

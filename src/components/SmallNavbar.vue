@@ -10,14 +10,28 @@ const toggelMinu = () => {
     minu.value = !minu.value
   }
 }
+import { useRouter } from 'vue-router' // استيراد Vue Router
+
+// تعريف أنواع الحدث باستخدام TypeScript
+const emit = defineEmits<{
+  scrollToSection: []
+}>()
+
+const router = useRouter()
+
+// التنقل وإرسال الحدث
+const handleNavigation = (): void => {
+  emit('scrollToSection') // إرسال الحدث مع الـ ID
+  router.replace('/') // الانتقال إلى الصفحة الرئيسية
+}
 </script>
 
 <template>
-  <header class="sm:hidden">
+  <header class="md:hidden">
     <nav
       class="bg-bluee"
       :class="{
-        'h-96 ': minu,
+        'h-[28rem] ': minu,
         'h-24 ': !minu,
       }"
     >
@@ -50,43 +64,81 @@ const toggelMinu = () => {
           class="duration-300 bg-bluee text-white bg-opacity-60 rounded-sm w-11/12 mx-auto flex flex-col items-center justify-items-center absolute top-1 left-3 z-30"
         >
           <!-- <li class="py-2 border-b-2 border-bluee-sec w-full text-center"> -->
-          <li v-motion-pop class="py-2 border-b-2 border-bluee-sec w-full text-center">
+
+          <li
+            v-motion-pop
+            class="py-2 border-b-2 border-bluee-sec w-full text-center bg-[#302b2b94] rounded-t-lg"
+          >
             <RouterLink :to="{ name: 'home' }"> {{ $t('Nav["home"]') }} </RouterLink>
           </li>
-          <li v-motion-pop class="py-2 border-b-2 border-bluee-sec w-full text-center">
-            <RouterLink :to="{ name: 'ProgramsPage' }"> {{ $t('Nav["Programs"]') }}</RouterLink>
-          </li>
-          <li v-motion-pop :delay="200" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-            <RouterLink :to="{ name: 'PhotoGallery' }"> {{ $t('Nav["PhotoGallery"]') }}</RouterLink>
-          </li>
-          <li v-motion-pop :delay="300" class="py-2 border-b-2 border-bluee-sec w-full text-center">
+
+          <li
+            v-motion-pop
+            :delay="100"
+            class="py-2 border-b-2 border-bluee-sec w-full text-center bg-[#302b2b94]"
+          >
             <RouterLink :to="{ name: 'about' }"> {{ $t('Nav["about"]') }} </RouterLink>
           </li>
 
-          <li v-motion-pop :delay="400" class="py-2 border-b-2 border-bluee-sec w-full text-center">
+          <li
+            v-motion-pop
+            :delay="200"
+            class="py-2 border-b-2 border-bluee-sec w-full text-center bg-[#302b2b94]"
+          >
+            <RouterLink :to="{ name: 'ProgramsPage' }"> {{ $t('Nav["Programs"]') }}</RouterLink>
+          </li>
+          <li
+            v-motion-pop
+            :delay="300"
+            class="py-2 border-b-2 border-bluee-sec w-full text-center bg-[#302b2b94]"
+          >
             <RouterLink :to="{ name: 'GoldenHistory' }">
               {{ $t('Nav["GoldenHistory"]') }}
             </RouterLink>
           </li>
-          <li v-motion-pop :delay="400" class="py-2 border-b-2 border-bluee-sec w-full text-center">
-            {{ $t('Nav["contact"]') }}
+          <li
+            v-motion-pop
+            :delay="400"
+            class="py-2 border-b-2 border-bluee-sec w-full text-center bg-[#302b2b94]"
+          >
+            <RouterLink :to="{ name: 'PhotoGallery' }"> {{ $t('Nav["PhotoGallery"]') }}</RouterLink>
           </li>
-          <div class="flex p-4 mr-4 gap-3">
-            <select
-              class="w-20 text-slate-300 bg-transparent border border-gray-300 rounded"
-              v-model="$i18n.locale"
+          <li
+            v-motion-pop
+            :delay="500"
+            class="py-2 border-b-2 border-bluee-sec w-full text-center bg-[#302b2b94]"
+          >
+            <RouterLink :to="{ name: 'Advertisements' }">
+              {{ $t('Nav["Advertisements"]') }}</RouterLink
             >
-              <option
-                class="uppercase"
-                v-for="locale in $i18n.availableLocales"
-                :key="`locale-${locale}`"
-                :value="locale"
+          </li>
+
+          <li
+            @click="handleNavigation"
+            v-motion-pop
+            :delay="600"
+            class="py-2 border-b-2 border-bluee-sec w-full text-center bg-[#302b2b94]"
+          >
+            <a href="/#contact"> {{ $t('Nav["contact"]') }}</a>
+          </li>
+          <div class="bg-[#302b2b94] w-full rounded-b-lg" v-motion-pop :delay="700">
+            <div class="flex p-4 justify-center gap-3">
+              <select
+                class="w-20 text-slate-300 bg-transparent border border-gray-300 rounded"
+                v-model="$i18n.locale"
               >
-                {{ locale }}
-              </option>
-            </select>
-            :{{ $t('Nav["lang"]') }}
-            <v-icon :icon="mdiWeb" color="#FFFFFF"></v-icon>
+                <option
+                  class="uppercase"
+                  v-for="locale in $i18n.availableLocales"
+                  :key="`locale-${locale}`"
+                  :value="locale"
+                >
+                  {{ locale }}
+                </option>
+              </select>
+              :{{ $t('Nav["lang"]') }}
+              <v-icon :icon="mdiWeb" color="#FFFFFF"></v-icon>
+            </div>
           </div>
         </ul>
       </section>

@@ -308,8 +308,33 @@ export const photoGroups = [
       },
       {
         id: '14',
-        url: 'https://lyc.ly/assets/imeges/aboutUs.jpg',
+        url: 'https://lyc.ly/assets/imeges/a43.jpg',
         title: 'Team Building',
+      },
+      {
+        id: '15',
+        url: 'https://lyc.ly/assets/imeges/a44.jpg',
+        title: 'Team6 Building',
+      },
+      {
+        id: '16',
+        url: 'https://lyc.ly/assets/imeges/a54.jpg',
+        title: 'Team 4Building',
+      },
+      {
+        id: '17',
+        url: 'https://lyc.ly/assets/imeges/a29.jpg',
+        title: 'Team3 Building',
+      },
+      {
+        id: '18',
+        url: 'https://lyc.ly/assets/imeges/a37.jpg',
+        title: 'Team 2Building',
+      },
+      {
+        id: '19',
+        url: 'https://lyc.ly/assets/imeges/image13.jpg',
+        title: 'Team1 Building',
       },
     ],
   },
@@ -327,6 +352,11 @@ export const photoGroups = [
       {
         id: '15',
         url: 'https://lyc.ly/assets/imeges/history7.jpg',
+        title: ' LYC',
+      },
+      {
+        id: '15',
+        url: 'https://lyc.ly/assets/imeges/a33.jpg',
         title: ' LYC',
       },
       {
@@ -367,6 +397,22 @@ export const photoGroups = [
       {
         id: '20',
         url: 'https://lyc.ly/assets/imeges/history12.jpg',
+        title: 'Yacht Party',
+      },
+
+      {
+        id: '22',
+        url: 'https://lyc.ly/assets/imeges/a21.jpg',
+        title: 'Yacht Party',
+      },
+      {
+        id: '23',
+        url: 'https://lyc.ly/assets/imeges/a34.jpg',
+        title: 'Yacht Party',
+      },
+      {
+        id: '23',
+        url: 'https://lyc.ly/assets/imeges/a45.jpg',
         title: 'Yacht Party',
       },
     ],
