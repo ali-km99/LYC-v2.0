@@ -10,12 +10,12 @@
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div class="flex items-center space-x-3">
-            <h1 class="text-xl sm:text-2xl font-bold">النادي الليبي لليخوت</h1>
+            <h1 class="text-xl sm:text-2xl font-bold">{{ $t('clubName') }}</h1>
           </div>
           <div class="relative w-full sm:w-auto">
             <input
               type="text"
-              placeholder=" ... بحث عن صورة"
+              :placeholder="$i18n.locale == 'ar' ? '... بحث عن صورة' : 'Search for an image ...'"
               v-model="searchTerm"
               class="w-full sm:w-48 md:w-64 pl-10 pr-4 py-2 rounded-full bg-slate-800/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm sm:text-base transition-all duration-300 focus:sm:w-72"
             />
