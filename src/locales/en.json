@@ -5,7 +5,7 @@
     "about": "About  ",
     "GoldenHistory": " Golden History  ",
     "Programs": "Programs & Activities  ",
-    "Advertisements": "  Advertisements ",
+    "Advertisements": "Announcements",
     "contact": "Contact Us ",
     "lang": "Locale"
   },
@@ -78,5 +78,5 @@
     }
   },
   "Copyright": "© Libyan Yacht Club - All Rights Reserved",
-  "Advertisements": "Libyan Yacht Club Advertisements"
+  "Advertisements": "Libyan Yacht Club Announcements"
 }

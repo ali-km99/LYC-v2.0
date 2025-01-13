@@ -129,7 +129,7 @@ import {
                 alt=""
                 class="mx-auto h-96 object-cover rounded-lg shadow-lg hidden lg:block"
               />
-              <div class="flex justify-center items-center flex-col mt-14 h-full">
+              <div class="flex justify-center items-center flex-col h-full">
                 <div
                   class="w-10 h-10 rounded-full bg-[#E4FF5B] flex justify-center items-center self-end"
                 >

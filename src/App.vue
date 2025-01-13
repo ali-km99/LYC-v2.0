@@ -14,28 +14,43 @@ import router from './router'
         class="flex flex-wrap justify-center -mx-5 -my-2"
       >
         <div class="px-5 py-2">
-          <a href="/Advertisements" class="text-base leading-6 text-white hover:text-gray-900">
+          <a
+            @click="router.replace({ name: 'Advertisements' })"
+            class="text-base leading-6 text-white hover:text-gray-900"
+          >
             {{ $t('Nav["Advertisements"]') }}
           </a>
         </div>
         <div class="px-5 py-2">
-          <a href="/PhotoGallery" class="text-base leading-6 text-white hover:text-gray-900">
+          <a
+            @click="router.replace({ name: 'PhotoGallery' })"
+            class="text-base leading-6 text-white hover:text-gray-900"
+          >
             {{ $t('Nav.PhotoGallery') }}
           </a>
         </div>
 
         <div class="px-5 py-2">
-          <a href="/GoldenHistory" class="text-base leading-6 text-white hover:text-gray-900">
+          <a
+            @click="router.replace({ name: 'GoldenHistory' })"
+            class="text-base leading-6 text-white hover:text-gray-900"
+          >
             {{ $t('Nav.GoldenHistory') }}
           </a>
         </div>
         <div class="px-5 py-2">
-          <a href="/Programs" class="text-base leading-6 text-white hover:text-gray-900">
+          <a
+            @click="router.replace({ name: 'ProgramsPage' })"
+            class="text-base leading-6 text-white hover:text-gray-900"
+          >
             {{ $t('Nav["Programs"]') }}
           </a>
         </div>
         <div class="px-5 py-2">
-          <a href="/aboutUs" class="text-base leading-6 text-white hover:text-gray-900">
+          <a
+            @click="router.replace({ name: 'about' })"
+            class="text-base leading-6 text-white hover:text-gray-900"
+          >
             {{ $t('Nav.about') }}
           </a>
         </div>
