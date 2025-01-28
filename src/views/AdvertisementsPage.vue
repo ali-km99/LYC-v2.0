@@ -88,30 +88,7 @@ import NavBar from '@/components/NavBar.vue'
 import SmallNavbar from '@/components/SmallNavbar.vue'
 import { ref } from 'vue'
 
-const races = ref([
-  // {
-  //   id: 1,
-  //   title: 'بطولة البحر المتوسط الصيفية 2024',
-  //   location: 'ميناء طرابلس، ليبيا',
-  //   info: 'abc...',
-  //   rules: 'abc...  ',
-  //   accommodation: 'abc...',
-  //   schedule: [
-  //     { date: '2024-07-01', time: '09:00', event: 'التسجيل' },
-  //     { date: '2024-07-01', time: '14:00', event: 'السباق التجريبي' },
-  //     { date: '2024-07-02', time: '10:00', event: 'يوم السباق الأول' },
-  //     { date: '2024-07-03', time: '10:00', event: 'يوم السباق الثاني' },
-  //     { date: '2024-07-04', time: '10:00', event: 'يوم السباق الثالث' },
-  //     { date: '2024-07-04', time: '18:00', event: 'حفل التتويج' },
-  //   ],
-  //   registration: {
-  //     deadline: '2024-06-15',
-  //     fee: '$250',
-  //     process: 'التسجيل عبر الإنترنت من خلال موقع النادي.',
-  //     link: '#',
-  //   },
-  // },
-])
+const races = ref()
 
 const downloadAnnouncement = (raceId: number) => {
   alert(`تحميل إعلان السباق رقم ${raceId}`)
