@@ -1,6 +1,17 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import router from './router'
+import { RouterView, useRouter } from 'vue-router'
+
+const emit = defineEmits<{
+  scrollToSection: []
+}>()
+
+const router = useRouter()
+
+// التنقل وإرسال الحدث
+const handleNavigation = (): void => {
+  emit('scrollToSection') // إرسال الحدث مع الـ ID
+  router.replace('/') // الانتقال إلى الصفحة الرئيسية
+}
 </script>
 
 <template>
@@ -13,6 +24,11 @@ import router from './router'
         :dir="$i18n.locale == 'ar' ? 'ltr' : 'rtl'"
         class="flex flex-wrap justify-center -mx-5 -my-2"
       >
+        <div class="px-5 py-2" @click="handleNavigation">
+          <a href="/#contact" class="text-base leading-6 text-white hover:text-gray-900">
+            {{ $t('Nav["contact"]') }}</a
+          >
+        </div>
         <div class="px-5 py-2">
           <a
             @click="router.replace({ name: 'Advertisements' })"
@@ -30,14 +46,14 @@ import router from './router'
           </a>
         </div>
 
-        <div class="px-5 py-2">
+        <!-- <div class="px-5 py-2">
           <a
             @click="router.replace({ name: 'GoldenHistory' })"
             class="text-base leading-6 text-white hover:text-gray-900"
           >
             {{ $t('Nav.GoldenHistory') }}
           </a>
-        </div>
+        </div> -->
         <div class="px-5 py-2">
           <a
             @click="router.replace({ name: 'ProgramsPage' })"

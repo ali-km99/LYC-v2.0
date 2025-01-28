@@ -1,5 +1,15 @@
 <script setup lang="ts">
+import router from '@/router'
 import { mdiWeb } from '@mdi/js'
+
+// تعريف أنواع الحدث باستخدام TypeScript
+const emit = defineEmits<{
+  scrollToSection: []
+}>()
+const handleNavigation = (): void => {
+  emit('scrollToSection') // إرسال الحدث مع الـ ID
+  router.replace('/') // الانتقال إلى الصفحة الرئيسية
+}
 </script>
 
 <template>
@@ -13,7 +23,7 @@ import { mdiWeb } from '@mdi/js'
         <div>
           <ul :dir="$i18n.locale == 'ar' ? 'ltr' : 'rtl'" class="flex flex-row gap-10 text-white">
             <li class="hover:text-[#394A98] hover:scale-110 duration-150 transition text-lg">
-              <a href="#contact"> {{ $t('Nav["contact"]') }} </a>
+              <a @click="handleNavigation" href="#contact"> {{ $t('Nav["contact"]') }} </a>
             </li>
             <RouterLink :to="{ name: 'Advertisements' }">
               <li
