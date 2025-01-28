@@ -109,7 +109,7 @@ const ENobjectives = [
 <template>
   <div class="min-h-screen bg-[#0B6D90] lg:bg-white">
     <!-- Hero Section with Fixed Background -->
-    <div class="lg:hero-section lg:bg-about bg-aboutSmall w-full relative mb-8">
+    <div class="hero-section lg:bg-about bg-aboutSmall w-full relative mb-8">
       <div class="absolute inset-0"></div>
       <div class="hidden lg:block">
         <Navbar />
@@ -379,7 +379,7 @@ div {
 
 .hero-section {
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 900px;

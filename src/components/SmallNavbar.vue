@@ -87,7 +87,7 @@ const handleNavigation = (): void => {
           >
             <RouterLink :to="{ name: 'ProgramsPage' }"> {{ $t('Nav["Programs"]') }}</RouterLink>
           </li>
-          <li
+          <!-- <li
             v-motion-pop
             :delay="300"
             class="py-2 border-b-2 border-bluee-sec w-full text-center bg-[#302b2b94]"
@@ -95,7 +95,7 @@ const handleNavigation = (): void => {
             <RouterLink :to="{ name: 'GoldenHistory' }">
               {{ $t('Nav["GoldenHistory"]') }}
             </RouterLink>
-          </li>
+          </li> -->
           <li
             v-motion-pop
             :delay="400"

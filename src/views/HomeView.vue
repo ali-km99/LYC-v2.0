@@ -8,10 +8,39 @@ import {
   mdiEmail,
   mdiEmailFastOutline,
   mdiMail,
+  mdiMapMarkerOutline,
   mdiPhone,
   mdiPhoneOutline,
   mdiSend,
 } from '@mdi/js'
+import { ref } from 'vue'
+const name = ref('')
+const email = ref('')
+const phoneNum = ref('')
+const massege = ref('')
+
+// function sendMail() {
+//   const params = {
+//     user_name: massege,
+//     user_email: email,
+//     user_phone: phoneNum,
+//     message: massege,
+//   }
+
+//   const serviceID = 'service_yvtufdq'
+//   const templateID = 'template_agx0h1k'
+//   emailjs
+//     .send(serviceID, templateID, params)
+//     .then((res) => {
+//       // document.getElementById('#name2').value = ''
+//       // document.getElementById('#email2').value = ''
+//       // document.getElementById('#message2').value = ''
+
+//       console.log(res)
+//       window.alert('Your message sent successfully!!')
+//     })
+//     .catch((err) => console.log(err))
+// }
 </script>
 
 <template>
@@ -46,12 +75,18 @@ import {
       :duration="1500"
       class="w-full grid-cols-3 lg:mt-96 mt-32 pr-5 hidden lg:grid"
     >
-      <div class="bg-slate-300/25 full flex col-start-3 flex-col p-3">
+      <div
+        class="bg-slate-300/25 hover:bg-slate-300/70 duration-200 rounded-lg full flex col-start-3 flex-col p-3"
+      >
         <p class="text-2xl text-white font-bold text-center">
           {{ $t("content['clubName']") }}
         </p>
-        <p class="text-yellow-50 text-end mt-4">{{ $t("content['description1']") }}</p>
-        <p class="text-yellow-50 text-end w-full">{{ $t("content['description2']") }}</p>
+        <p class="text-gray-800 text-end mt-4 text-xl font-semibold">
+          {{ $t("content['description1']") }}
+        </p>
+        <p class="text-gery-800 text-end w-full text-xl font-semibold">
+          {{ $t("content['description2']") }}
+        </p>
         <!-- <button >
           المزيد
         </button> -->
@@ -95,14 +130,14 @@ import {
     <div class="d-flex fill-height justify-center align-center">
       <v-carousel height="400" hide-delimiter-background show-arrows>
         <template v-slot:next="{ props }">
-          <div class="mt-80 z-30">
+          <div class="mt-[350px] z-30">
             <v-btn @click="props.onClick" variant="outlined" color="primary" size="large">
               {{ $t('next') }}
             </v-btn>
           </div>
         </template>
         <template v-slot:prev="{ props }">
-          <div class="mt-80 z-30">
+          <div class="mt-[350px] z-30">
             <v-btn variant="outlined" color="primary" size="large" @click="props.onClick">
               {{ $t('back') }}
             </v-btn>
@@ -393,6 +428,12 @@ import {
             </a>
             <v-icon :icon="mdiPhoneOutline"></v-icon>
           </li>
+          <li class="flex items-center text-blue-600">
+            <a href="javascript:void(0)" class="text-sm mr-2">
+              <strong> {{ $t('address') }}</strong>
+            </a>
+            <v-icon :icon="mdiMapMarkerOutline"></v-icon>
+          </li>
         </ul>
       </div>
       <div class="z-10 relative h-full max-md:min-h-[350px]">
@@ -409,9 +450,10 @@ import {
 
 <style scoped>
 .body {
-  background-image: url('../assets/imeges/bg2.jpg');
-
-  background-size: cover;
+  /* background-image: url('../assets/imeges/bg2.jpg'); */
+  background-image: url('../assets/imeges/img99.jpg');
+  min-height: 1100px;
+  /* background-size: cover; */
   background-repeat: no-repeat;
 }
 

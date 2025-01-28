@@ -11,7 +11,7 @@
   },
 
   "content": {
-    "clubName": "Libya Yacht Club - LIBYAN YACHT CLUB",
+    "clubName": "  Libyan Yacth Club   النادي الليبي لليخوت ",
     "description1": "A private club specializing in water sports and sea games",
     "description2": "Founded in 2015 in the city of Tripoli.",
     "moreButton": "More"
@@ -79,5 +79,6 @@
   },
   "Copyright": "© Libyan Yacht Club - All Rights Reserved",
   "Advertisements": "Libyan Yacht Club Announcements",
-  "clubName": "Libyan Yacht Club"
+  "clubName": "Libyan Yacht Club",
+  "address": "Hay Al-Andalus Corniche Road Al-Fawz roundabout Tripoli Libya"
 }
